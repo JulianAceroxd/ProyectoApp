@@ -554,7 +554,7 @@ Controller.votos=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNC
     }
     else{
         console.log(resbd);
-    res.redirect('/urna')   //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
+    res.redirect('UrnaUsu')   //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
     }
     });
 
