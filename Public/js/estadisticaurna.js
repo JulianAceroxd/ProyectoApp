@@ -31,8 +31,8 @@ console.log("aca va el tamaño"+data.length)
 
    for(i=0; i<data.length;i++){
     var button = '<form action="/Votos" method="post"><input type="submit"value="'+data[i].Opcion+'"  id="num_parrafos" name="opcion"/><input type="hidden"value="'+results.map(item=>item.IdUrna)[0]+'"  id="num_parrafos" name="id"/></form>'
-    $('botones'+d2 ).append(button);
-    console.log('botones'+d2 )
+    $('#botones'+d2 ).append(button);
+    console.log('botones'+d)
     console.log("aca van los datos"+data[i].Opcion)      
 
 }}
