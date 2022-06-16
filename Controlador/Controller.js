@@ -85,7 +85,7 @@ Controller.urnaUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
             }   
             else{
                 console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
-                res.render('urnaUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                res.render('UrnaUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
             }
         })
     
