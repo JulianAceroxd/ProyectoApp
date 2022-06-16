@@ -11,7 +11,7 @@ $(document).ready(function(){
        id: d
    };
   
-   let =url='/opciones'
+   let =url='/urnadatos'
    fetch(url,{
     method:'POST',
     headers:{
@@ -24,13 +24,15 @@ $(document).ready(function(){
    .then(data=>mostrarDatos(data))
    .catch(error=>console.log(error))
    const mostrarDatos=(data)=>{
-     alert(data[1].Op)
 
+
+console.log("aca va el tamaño"+data.length)
 
 
    for(i=0; i<data.length;i++){
     var button = '<form action="/Votos" method="post"><input type="submit"value="'+data[i].Opcion+'"  id="num_parrafos" name="opcion"/><input type="hidden"value="'+results.map(item=>item.IdUrna)[0]+'"  id="num_parrafos" name="id"/></form>'
-    $('form').append(button);
+    $('botones'+d2 ).append(button);
+    console.log('botones'+d2 )
     console.log("aca van los datos"+data[i].Opcion)      
 
 }}
