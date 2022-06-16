@@ -159,20 +159,20 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                      n=n+1;
                     const a=req.body.id;
                   console.log(n+a)
-                
+                  cnn.query('SELECT * FROM tbnoticias',(err,resbd)=>{  
                     cnn.query('UPDATE tbcomennoticias SET  likes="'+n+'" WHERE IdComentarioNoti="'+a+'"',async(err,respbb)=>{
                         if(err){
                             next(new Error(err));
                 
                         }
                         else{
-                            res.redirect('NoticiasUsu');
+                            res.render('NoticiasUsu',{Datos:resbd});
                             console.log("Actualizado")
                             
                         }
                 
                     })
-               
+                })
                 }
 
  Controller.Comentario=(req,res,next)=>{  
