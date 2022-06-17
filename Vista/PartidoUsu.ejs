@@ -65,7 +65,7 @@
 
         <p class="nomp"><%=Datos.DesPartido%></p>
         <div class="imgpa">
-            <img class="imgpa" src="./img/<%=Datos.ImgPartido%>" alt="" >
+            <img class="imgpa" src="/imagenes/<%=Datos.ImgPartido%>" alt="" >
         </div>
             </article>
         
@@ -73,11 +73,11 @@
         </main>
      
             <aside class="sidebar">
-                <h1>Integrantes FUNCIONA CARGA <%=Datos.NomPartido%></h1>
+                <h1>Integrantes  <%=Datos.NomPartido%></h1>
                 <%})%>
                 <% Datos2.forEach(function (Datos2){ %>
                 <div>
-                    <img src="./imagenes/<%=Datos.ImgInt%>"  alt="modal_btn2" id="image" height="180px" width="190px" onclick="openImg2('<%=Datos2.IdIntegrante%>')">
+                    <img src="/imagenes/<%=Datos.ImgInt%>"  alt="modal_btn2" id="image" height="180px" width="190px" onclick="openImg2('<%=Datos2.IdIntegrante%>')">
                     <p class="nompos"><%=Datos2.NomInt%><%=Datos2.ApeInt%></p>
                 </div>
                 <div id="modal_container">
