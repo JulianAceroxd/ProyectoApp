@@ -699,29 +699,13 @@ Controller.votos=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNC
         cnn.query('INSERT INTO tbintegrantes SET?',{IdPartido:p,NomInt:n,ApeInt:a,DesInt:d,ImgInt:i},(err,resbd)=>{ // CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
         if(err){
             next(new Error(err)); 
-            res.render('administrador', {
-                alert: true,
-                alertTitle: "Error",
-                alertMessage: "SEÑOR USUARIO NO SE AGREGO EL INTEGRANTE",
-                alertIcon:'error',
-                showConfirmButton: true,
-                timer: false,
-                ruta: '/'    
-            });
+            res.redirect('administrador');
 
          //NOS MUESTRA EL ERROR POR MEDIO DEL IF
         }
         else{
             console.log(resbd);
-            res.render('Administrador', {
-                alert: true,
-                alertTitle: "CORRECTO",
-                alertMessage: "¡SE AGREGO Al INTEGRANTE!'",
-                alertIcon:'success',
-                showConfirmButton: false,
-                timer: 1500,
-                ruta: 'Admi'  
-            });  //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
+            res.redirect('administrador'); //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
         }
         });
     
