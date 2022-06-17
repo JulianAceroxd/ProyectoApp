@@ -15,10 +15,10 @@ Rutas.post('/comentariosForo',Controller.comentariosForo);
 Rutas.get('/Usuario',Controller.Usuario);
 Rutas.get('/urnaUsu',Controller.urnaUsu);
 Rutas.get('/NotiUsu',Controller.NotiUsu);
-Rutas.get('/partidoUsu',Controller.PartidoUsu);
 Rutas.post('/comentarios',Controller.comentarios);
 Rutas.post('/likes',Controller.likes);
 Rutas.post('/AgrComentarios',Controller.Comentario);
+Rutas.get('/partido/:id',Controller.PartidoUsu);
 
 
 
@@ -48,7 +48,7 @@ Rutas.get('/opurna',Controller.op);
 Rutas.post('/agrop',Controller.agrop);
 Rutas.post('/candi',Controller.candi);
 
-Rutas.get('/partido/:id',Controller.partido);
+
 Rutas.get('/partidos',Controller.partidos);
 
 Rutas.get('/urnaadmin',Controller.urnaadmin);
