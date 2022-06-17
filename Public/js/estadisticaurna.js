@@ -10,7 +10,7 @@ $(document).ready(function(){
    const d2={
        id: d
    };
-  alert(d2)
+
    let =url='/urnadatos'
    fetch(url,{
     method:'POST',
