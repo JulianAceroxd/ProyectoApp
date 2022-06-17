@@ -4,8 +4,8 @@ $(document).ready(function(){
   
 
     $('.botons').on('click',function(){
-contador+1;
-
+contador=contador+1;
+alert(contador);
 if(contador>1){
 alert("eche compa deja click")
 }else{
