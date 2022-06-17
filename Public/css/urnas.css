@@ -98,7 +98,7 @@ color:#ce8500;
 
 
 body{
-    background-color: #BCE6F9;
+    background-color: aliceblue;
     font-family: 'Roboto' sans-serif;
     margin: 0;
 }
@@ -118,12 +118,12 @@ a{
 }
 
 header{
+  
     display: flex;
-    min-height: 130px;
+    min-height: 160px;
     background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
     justify-content: space-between;
     align-items: center;
-    width:210vh;
     padding: 10px;
 }
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
@@ -133,9 +133,8 @@ header{
 }
 
 #header {
+    display: flex;
     margin:auto;
-    width:320vh;
-    margin-left: 65vh;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -165,16 +164,9 @@ ul, ol {
     background: linear-gradient( 110deg, #62BDF9 60%,  #79B8E1 60%);
 }
 
-.nav li ul {
-    display:none;
-    position:absolute;
-    min-width:140px;
-}
-
 .nav li:hover > ul {
     display:block;
 }
-
 .nav li ul li {
     position:relative;
 }
@@ -199,14 +191,6 @@ nav a{
 }
 nav a:hover{
     color: #A4CBE6;
-}
-@media (max-width:700px){
-    header{
-        flex-direction: column;
-    }
-    nav{
-        padding: 10px 0px;
-    }
 }
 .titu{
     position: absolute;
