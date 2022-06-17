@@ -256,7 +256,7 @@ footer .container{
         
     }
     .carta:first-child{
-        background-image: url("../Img/voto.jpg");
+        background-image: url("../img/voto.jpg");
         background-position: center center;
         background-size: cover;
         font-weight: bold;
