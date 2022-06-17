@@ -88,9 +88,22 @@
         <div class="archivo-publicado">
             <img src="imagenes/<%=Datos.ImgNoti%>" alt="img">
         </div>
-      
+        <div class="botones-comentario">
+            <button type="" class="boton-puntuar">
+                <i class="fas fa-thumbs-up"></i>
+                45
+            </button>
+            <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdNoti%>">
+                
+                Ver Comentarios
+            </button>
+        </div>
+        <div class="comentarios-usuarios" id="comentarios<%=Datos.IdNoti%>">
+     
+        </div>
 
 </section>
+
     
 <%})%>
 <!--====  End of html  ====-->
@@ -123,5 +136,5 @@ No es necesario que copies esto!
 
 <!--====  End of tarjeta  ====-->
 </body>
-<script src="js/Anexos.js"></script>
+<script src="js/NotiEspec.js"></script>
 </html>
