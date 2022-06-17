@@ -276,6 +276,7 @@ font-family: 'Poppins', sans-serif;
     height: 20vh;
     flex-direction: unset;
 
+
 }
 .formu{
 
@@ -293,7 +294,6 @@ font-family: 'Poppins', sans-serif;
 .loo input{
     background-color: blueviolet;
     float: left;
-    width: 15vh;
     cursor: pointer;
     font-size: 1.5em;
     margin-top: 3vh;
@@ -304,8 +304,8 @@ font-family: 'Poppins', sans-serif;
     background: linear-gradient(220deg, #FFDCC7 60%, #FEEEE5 60%);
 }
 .loo{
-    position: relative;
-    margin-left: 70vh;
+    margin-left:auto;
+    margin-right: auto;
     cursor: pointer;
     
 }
