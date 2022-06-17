@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/logo.jpg">
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Noticia</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="Css/noti.css">
+   
+    
 
-    <title></title>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo">
@@ -16,26 +21,18 @@
         </a>
         <div id="header">
             <ul class="nav">
-               
-        <li><a href="/" class="">Inicio</a></li> 
-        <li><a href="/urnaespec" class="">Urna</a></li>
-        <li>  <a href="/foros" class="">Foros de discusion</a></li>
-        <li>  <a href="/NotiEspec" class="">Noticias</a></li>
-        <li><a href="">Partidos</a>
-            <ul id="partidos">
-
+                <li><a href="/" class="">Inicio</a></li>
+                <li><a href="/urnaespec" class="">Urna</a></li>
+                <li>  <a href="/foros" class="">Foros de discusion</a></li>
+                <li>  <a href="/NotiEspec" class="">Noticias</a></li>
+                <li><a href="">Partidos</a>
+                    <ul id="partidos">
+                    </ul>
+                </li>
+                <li> <a href="/login" class="">Login</a></li>
+                <li>  <a href="/Registro" class="">Registrate</a></li>
             </ul>
-        </li>
-        <li> <a href="/login" class="">Login</a></li>
-        <li>  <a href="/Registro" class="">Registrate</a></li>
-            <nav>
-              
-                <!--<a href="/crearparti" class="">crearpartido</a>
-                <a href="/crearforo" class="">crearforo</a>
-                <a href="/crearurna" class="">crearurna</a>
-                <a href="/admin" class="">Administrador</a>-->
-                
-            </nav>
+        </div>
     </header>
     <script>
         let =url='/partidos'
@@ -49,53 +46,82 @@
         for(i=0; i<data.length;i++){
             body+=`
                 
-                        <li><a href="/partidoespec/${data[i].IdPartido}">${data[i].NomPartido}</a></li>
-                    
-                            `
+                <li><a href="/partido/${data[i].IdPartido}">${data[i].NomPartido}</a></li>
+            
+                    `
                        
 
         }
         document.getElementById('partidos').innerHTML=body
-         console.log(body)
     }
     </script>
 
-    <section class="nuestros-programas">
-       
-        <div class="container">
-            
-            <h2>Noticias</h2>
-            <% Datos.forEach(function (Datos){ %>
-            <div class="programas">
-        <div class="carta">
-            <h3><%=Datos.NomNoti%></h3>
+
+<!--==========================
+=            html            =
+===========================-->
+<% Datos.forEach(function (Datos){ %>
+<section class="contenedor-comentarios">
+   
+    <div class="publicacion-realizada">
+        <div class="usuario-publico">
+            <div class="avatar">
+                <img src="Img/logo.jpg" alt="img">
+            </div>
+            <div class="contenido-publicacion">
+                <h4>Espectador</h4>
+                <ul>
+                    <li>Hace 3 min</li>
+                </ul>
+            </div>
+            <div class="menu-comentario">
+                <i class="fas fa-pen"></i>
+                <ul class="menu">
+                    <li><a href="">Editar</a></li>
+                    <li><a href="">Eliminar</a></li>
+                </ul>
+            </div>
            
-            <form action="/NoticiaEspec/<%=Datos.IdNoti%>">
-                <button> +info</button>
-            </form>
- 
         </div>
-        <%})%>
-   
-    </div>
-    </div>
-    </section>
-
-   
-    <section id="final">
-        <h2>Preparate</h2>
-        <form action="#">
-            <button>Registrate</button>
-        </form>
-   
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; Politica Activa 2022</p>
+        <p><%=Datos.NomNoti%>:</p>
+        <p><%=Datos.DesNoti%></p>
+        <div class="archivo-publicado">
+            <img src="imagenes/<%=Datos.ImgNoti%>" alt="img">
         </div>
-    </footer>
+      
+
+</section>
     
-    
+<%})%>
+<!--====  End of html  ====-->
+
+
+<!--=============================
+redes sociales fijadas en pantalla
+No es necesario que copies esto!
+==============================-->
+<style>
+.mensaje a {
+    color: inherit;
+    margin-right: .5rem;
+    display: inline-block;
+}
+.mensaje a:hover {
+    color: #309B76;
+    transform: scale(1.4)
+}
+</style>
+<div class="mis-redes" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5; z-index: 1000;">
+    <p style="font-size: .75rem;"> Politica Activa</p>
+    <div>
+        <a target="_blank" href="https://www.facebook.com/ApockPolitica Activa"><i class="fab fa-facebook-square"></i></a>
+        <a target="_blank" href="https://twitter.com/ApockPolitica Activa"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/ApockPolitica Activa"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+
+<!--====  End of tarjeta  ====-->
 </body>
+<script src="js/Anexos.js"></script>
 </html>
