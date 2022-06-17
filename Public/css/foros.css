@@ -269,13 +269,14 @@ footer .container{
     
 
 .contenedor{
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
     background-color: white;
     border: 1px solid black;
-    max-width: 600px;
+
     margin-top: 10vh;
     border-radius: 3vh;
   
@@ -283,7 +284,7 @@ footer .container{
 
 .op{
 
-    width: 320px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 
@@ -292,7 +293,7 @@ footer .container{
 }
 
 .op li a{
-    background-color:floralwhite;
+    
 
 
     font-family: 'Lobster', cursive;
@@ -304,7 +305,7 @@ footer .container{
 
 .op li{
     border: 1px solid black;
-    margin: 20px;
+    margin: 10px;
     border-radius: 12px;
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -323,10 +324,11 @@ footer .container{
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
     margin-top: 14px;
-    margin: 24px;
+    margin: 10px;
     font-size: 5vh;
 }
 .fonf{
+    margin: 1px;
     display: flex;
   justify-content: center;
     margin: 0 auto;
