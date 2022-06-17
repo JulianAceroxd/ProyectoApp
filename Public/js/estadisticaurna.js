@@ -30,6 +30,9 @@ console.log("aca va el tamaño"+data.length)
 
 
    for(i=0; i<data.length;i++){
+    if(data.length>=0){
+    alert("estas son las opciones no hay mas");
+    }
     var button = ' <form class="for" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="num_parrafos" name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/></div></form>'
     $('#botones'+d ).append(button);
     console.log('botones'+d)
