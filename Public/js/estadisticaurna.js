@@ -1,10 +1,15 @@
+let contador=0;
+
 $(document).ready(function(){
+  
 
     $('.botons').on('click',function(){
-
-        if('click'>1){
-       alert("calmado gonorrea")
-        }else{
+contador=contador+1;
+alert(contador);
+if(contador>1){
+alert("eche compa deja click")
+}else{
+      
 
     let btn=$('.botons').index(this);
     let doc=$('.id').eq(btn);
@@ -42,11 +47,7 @@ console.log("aca va el tamaño"+data.length)
 }}
 
  
-$(document).ready(function(){
-    $('#evento').on('click',function(){
-  alert("toma el boton")
-    });
-});
+
 }
     });
 });
