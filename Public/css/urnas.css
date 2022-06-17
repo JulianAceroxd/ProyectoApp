@@ -232,14 +232,14 @@ font-family: 'Poppins', sans-serif;
 }
 .contitu{
 
-    background-color: #FEEEE5;
+    background-color: #628ABB;
     
 }
 .bot{
     text-align: center;
 
     font-size: 3vh;
-    background-color: #FEEEE5;
+    background-color: #628ABB;
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
@@ -248,7 +248,7 @@ font-family: 'Poppins', sans-serif;
 .contnomde{
     margin-top: 2vh;
 
-    background-color: #FEEEE5;
+    background-color: #628ABB;
     padding-top: 4vh;
 }
 .botons{
@@ -257,7 +257,7 @@ font-family: 'Poppins', sans-serif;
     padding: 10px 30px;
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 5);
-    background: linear-gradient(220deg, #FFDCC7 60%, #FEEEE5 60%);
+    background: linear-gradient(220deg, #628ABB 60%, #628ABB 60%);
 }
 .botn{
     max-width: 160px;
@@ -276,7 +276,7 @@ font-family: 'Poppins', sans-serif;
 .estadisticafondo{
     margin-left: auto;
     margin-right: auto;
-    max-width: 400px;
+    max-width: 200px;
     height: 30vh;
     background-color: #BCE6F9;
     margin-top: 1vh;
