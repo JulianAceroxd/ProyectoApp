@@ -35,7 +35,7 @@ alert("Aun No Existen Comentarios Se El Primero En Comentar!");
             body+=`
                 <div class="comentario-principal-usuario">
             <div class="avatar">
-                            <img src="Imagenes/${data[i].Img}" alt="img">
+                            <img src="imagenes/${data[i].Img}" alt="img">
                         </div>
                         <div class="comentario">
                             <div class="usuario-comentario">
