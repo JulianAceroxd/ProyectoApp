@@ -24,6 +24,7 @@ Rutas.post('/AgrComentarios',Controller.Comentario);
 
 
 
+
 Rutas.get('/',Controller.index); 
 Rutas.get('/Registro',Controller.Registro);
 Rutas.get('/administrador',Controller.Admin);

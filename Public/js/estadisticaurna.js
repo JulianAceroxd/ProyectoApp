@@ -5,16 +5,18 @@ $(document).ready(function(){
 
     $('.botons').on('click',function(){
 contador=contador+1;
-alert(contador);
+
 if(contador>1){
-alert("eche compa deja click")
+
 }else{
       
 
     let btn=$('.botons').index(this);
     let doc=$('.id').eq(btn);
+    let usu=$('.usu').eq(btn);
     
     let d=doc.val();
+    let idu=usu.val();
 
    const d2={
        id: d
@@ -39,10 +41,16 @@ console.log("aca va el tamaño"+data.length)
 
 
    for(i=0; i<data.length;i++){
-    var button = ' <form class="for" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="evento" name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/></div></form>'
+
+ 
+
+    var button = ' <form class="for" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
     $('#botones'+d ).append(button);
     console.log('botones'+d)
     console.log("aca van los datos"+data[i].Opcion)      
+    
+  
+   
 
 }}
 

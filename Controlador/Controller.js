@@ -5,6 +5,81 @@ const bcryptjs=require('bcryptjs'); //LLAMAMOS EL MODULO DE INCRIPTACION DE CLAV
 const Controller={}; //HACEMOS INICIALIZAMOS EL CONTROLADOR 
 const express=require("express");
 const app=express(express)
+//Login
+Controller.Logine=async(req,res)=>{  //LOGINN 
+    const usu = await req.body.Usuario;  // TRAEMOS LOS NAME DE EL LOGIN PARA VALIDAR LOS CAMPOS
+    const cla = await req.body.Password;
+    console.log(usu,cla);
+    cnn.query('SELECT * FROM tbusuarios WHERE Usuario=?',[usu],async(err,results)=>{  //CONSULTAMOS LOS DATOS EN LA BASE DE DATOS Y REEMPLAZAMOS VALORES CON LOS QUE DILIGENCIA EL USUARIO
+        if(err){
+            next(new Error("ERROR AL REALIZAR LA CONSULTA",err)); //VALIDAMOS SI EXITEN ERRORES
+    
+        }else if(results!=0 && await(bcryptjs.compare(cla,results[0].ClaUsu))){ // SI EL RESULTADO ES DIFERENTE DE 0 ES QUE ENCONTRO EL USUARIO,POR MEDIO DE UN ARREGLO Y COMPARE, COMPARAMOS LO DILIGENCIADO POR EL USUARIO Y LO REGISTRADO EN LA BD                           console.log("Datos Correctossssssss");
+
+         //CREAMOS SESIONES POR MEDIO DE UN ARREGLO, QUE NOS RETORNA LOS DATOS DE EL USUARIO LOGEADO
+       req.session.Login=true;
+       Nombre=results[0].NomUsu;
+       Apellido=results[0].ApeUsu;
+       IdUsu=results[0].IdUsu;
+       Img=results[0].Img;
+
+       Rol=results[0].Rol;
+       console.log(Nombre+Apellido+Rol); //GENERAMOS LA SESION AL DARLE COMO TRUE EN VERDADERA.
+     
+       switch(Rol) {
+        case "Administrador":
+      res.redirect("Administrador")
+        break;
+        case "Usuario":
+            Nombre=results[0].NomUsu;
+       Apellido=results[0].ApeUsu;
+     IdUsu=results[0].IdUsu;
+
+       Rol=results[0].Rol;  //CREAMOS SESIONES POR MEDIO DE UN ARREGLO, QUE NOS RETORNA LOS DATOS DE EL USUARIO LOGEADO
+       req.session.Login=true;
+       console.log(Nombre+Apellido+Rol);
+            res.redirect("Usuario")
+       }
+       IdUsu=results[0].IdUsu;
+       Img=results[0].Img;
+       Nombre=results[0].NomUsu;
+       Apellido=results[0].ApeUsu;
+
+        }
+    
+        
+        else{
+           
+            console.log("DATOS INCORRECTOS"); //SALIMOS DEL IF DE ENTRADA Y SWITCH A UN VALIDADOR SI LOS DATOS SON INCORRECTOS 
+        res.redirect('/'); //NOS REDIRIGE AL MISMO ARCHIVO
+        }
+    })
+    
+    
+        }
+
+        Controller.votos=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECH
+            const o=req.body.opcion;
+            const i=req.body.id;
+            const idusu=req.body.usuario;
+            
+                //POR MEDIO DEL CONST ALMACENAMOS EN LETRAS LOS VALORES DE LA PAGINA A INSERTAR,GRACIAS ESTO A LA RUTAS
+            console.log(o+i+idusu)
+          
+            cnn.query('INSERT INTO tbresurna SET?',{IdUrna:i,ResUrna:o,IdUsu:IdUsu},(err,resbd)=>{ // CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
+            if(err){
+                next(new Error(err));  //NOS MUESTRA EL ERROR POR MEDIO DEL IF
+            }
+            else{
+                console.log(resbd);
+            res.redirect('UrnaUsu')   //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
+            }
+            });
+        
+        
+            }
+
+
 //CONTROLADOR DE ESPECTADOR
 Controller.urnaEspec=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
   
@@ -178,7 +253,7 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
  Controller.Comentario=(req,res,next)=>{  
     const IdUsu=req.body.id;
     const IdNoti=req.body.idnoti
-    const Comentario=req.body.comentario
+    const Comentario=req.body;
     const likes=0;
 
     console.log(IdUsu,IdNoti,Comentario,likes)
@@ -302,55 +377,7 @@ Controller.Registro=(req,res,next)=>{
     
     
             }
-        Controller.Logine=async(req,res,next)=>{  //LOGINN 
-            const usu = await req.body.Usuario;  // TRAEMOS LOS NAME DE EL LOGIN PARA VALIDAR LOS CAMPOS
-            const cla = await req.body.Password;
-            console.log(usu,cla);
-            cnn.query('SELECT * FROM tbusuarios WHERE Usuario=?',[usu],async(err,results)=>{  //CONSULTAMOS LOS DATOS EN LA BASE DE DATOS Y REEMPLAZAMOS VALORES CON LOS QUE DILIGENCIA EL USUARIO
-                if(err){
-                    next(new Error("ERROR AL REALIZAR LA CONSULTA",err)); //VALIDAMOS SI EXITEN ERRORES
-            
-                }else if(results!=0 && await(bcryptjs.compare(cla,results[0].ClaUsu))){ // SI EL RESULTADO ES DIFERENTE DE 0 ES QUE ENCONTRO EL USUARIO,POR MEDIO DE UN ARREGLO Y COMPARE, COMPARAMOS LO DILIGENCIADO POR EL USUARIO Y LO REGISTRADO EN LA BD                           console.log("Datos Correctossssssss");
-    
-               Nombre=results[0].NomUsu;
-               Apellido=results[0].ApeUsu;
-               IdUsu=results[0].IdUsu;
-               Img=results[0].Img;
-    
-               Rol=results[0].Rol;  //CREAMOS SESIONES POR MEDIO DE UN ARREGLO, QUE NOS RETORNA LOS DATOS DE EL USUARIO LOGEADO
-               req.session.Login=true;
-               console.log(Nombre+Apellido+Rol); //GENERAMOS LA SESION AL DARLE COMO TRUE EN VERDADERA.
-             
-               switch(Rol) {
-                case "Administrador":
-              res.redirect("Administrador")
-                break;
-                case "Usuario":
-                    Nombre=results[0].NomUsu;
-               Apellido=results[0].ApeUsu;
-             IdUsu=results[0].IdUsu;
-    
-               Rol=results[0].Rol;  //CREAMOS SESIONES POR MEDIO DE UN ARREGLO, QUE NOS RETORNA LOS DATOS DE EL USUARIO LOGEADO
-               req.session.Login=true;
-               console.log(Nombre+Apellido+Rol);
-                    res.redirect("Usuario")
-               }
-               IdUsu=results[0].IdUsu;
-               Img=results[0].Img;
-               Nombre=results[0].NomUsu;
-               Apellido=results[0].ApeUsu;
-                }
-            
-                
-                else{
-                   
-                    console.log("DATOS INCORRECTOS"); //SALIMOS DEL IF DE ENTRADA Y SWITCH A UN VALIDADOR SI LOS DATOS SON INCORRECTOS 
-                res.redirect('/'); //NOS REDIRIGE AL MISMO ARCHIVO
-                }
-            })
-            
-            
-                }
+       
                 Controller.cerrar=(req,res,next)=>{
                     req.session.destroy(function (err) {
                         res.redirect('/'); //Inside a callback… bulletproof!
@@ -412,7 +439,7 @@ Controller.consultageneralurna=(req,res,next)=>{    //creamos una consulta de us
 console.log("entra al controlador"+id);
 
    
-    cnn.query('SELECT o.IdUrna,o.Opcion, IFNULL( COUNT(r.IdUsu), 0) AS cantidad FROM tbopurna o LEFT OUTER JOIN  tbresurna r ON o.IdUrna=r.IdUrna AND o.Opcion=r.ResUrna WHERE o.IdUrna=? GROUP BY o.IdUrna,o.Opcion ORDER BY 1,2;',[id],(err,resbd)=>{ 
+    cnn.query('SELECT o.IdUrna,o.Opcion,r.IdUsu, IFNULL( COUNT(r.IdUsu), 0) AS cantidad FROM tbopurna o LEFT OUTER JOIN  tbresurna r ON o.IdUrna=r.IdUrna AND o.Opcion=r.ResUrna WHERE o.IdUrna=? GROUP BY o.IdUrna,o.Opcion ORDER BY 1,2;',[id],(err,resbd)=>{ 
          //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
     if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
             next(new Error(err));
@@ -544,11 +571,12 @@ console.log("llega mal"+id)
 Controller.votos=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECH
     const o=req.body.opcion;
     const i=req.body.id;
-    const id="14";
+    const IdUsu=req.body.usuario;
+    
         //POR MEDIO DEL CONST ALMACENAMOS EN LETRAS LOS VALORES DE LA PAGINA A INSERTAR,GRACIAS ESTO A LA RUTAS
-    console.log(o+i+id)
+    console.log(o+i+IdUsu)
   
-    cnn.query('INSERT INTO tbresurna SET?',{IdUrna:i,ResUrna:o,IdUsu:id},(err,resbd)=>{ // CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
+    cnn.query('INSERT INTO tbresurna SET?',{IdUrna:i,ResUrna:o,IdUsu:IdUsu},(err,resbd)=>{ // CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
     if(err){
         next(new Error(err));  //NOS MUESTRA EL ERROR POR MEDIO DEL IF
     }
