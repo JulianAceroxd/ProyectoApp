@@ -335,6 +335,14 @@ Controller.Registro=(req,res,next)=>{
                                                     res.render('crearforos')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
                                                     res.send("ERROR DE CONTROLADOR");
                                                     }
+                                                    Controller.Foros=(req,res,next)=>{
+                                                        res.render('foros')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
+                                                        res.send("ERROR DE CONTROLADOR");
+                                                        }
+                                                        Controller.inteForos=(req,res,next)=>{
+                                                            res.render('inteforo')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
+                                                            res.send("ERROR DE CONTROLADOR");
+                                                            }
     Controller.insertaru=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECHA
         const r="Usuario";
         const n=req.body.nombre;

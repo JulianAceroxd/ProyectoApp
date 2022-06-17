@@ -58,6 +58,8 @@ Rutas.get('/cerrar',Controller.cerrar);
 Rutas.get('/login',Controller.Iniciar);
 Rutas.get('/partidos',Controller.Partidos);
 Rutas.get('/noticias',Controller.Noticias);
+Rutas.get('/foros',Controller.Foros);
+Rutas.get('/inteforos',Controller.inteForos);
 Rutas.get('/crearparti',Controller.CrePartidos); 
 Rutas.get('/crearUrna',Controller.CreUrnas);  //HACEMOS LLAMADO DE EL CONTROLADOR INDEX QUE ES NUESTR ARCHIVO O RAIZ PRINCIPAL
 Rutas.post('/Insertar',Controller.insertaru);
