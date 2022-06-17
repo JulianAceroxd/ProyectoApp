@@ -7,10 +7,12 @@ const morgan=require('morgan');
 const session= require('express-session');
 const multer=require('multer');
 const mimeTypes=require('mime-types');
+const { Cookie } = require('express-session');
 app.use(session({
     secret:'123',
     resave:true,
-    saveUninitialized:true
+    saveUninitialized:true,
+    cookie: {maxAge:10000000}
 }));
 app.use(express.json())
 app.use(morgan('dev'));
