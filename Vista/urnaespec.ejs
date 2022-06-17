@@ -33,7 +33,7 @@
                     <ul class="nav">
                        
                 <li><a href="/" class="">Inicio</a></li> 
-                <li><a href="/urnaespec" class="">Urna</a></li>
+                
                 <li>  <a href="/foros" class="">Foros de discusion</a></li>
                 <li>  <a href="/NotiEspec" class="">Noticias</a></li>
                 <li><a href="">Partidos</a>
@@ -93,13 +93,13 @@
                 <div class="contnomde">
                 <h1 class="bot"><%=Datos.NomUrna%></h1>
                 <p class="bot"><%=Datos.DesUrna%></p>
-                <input class="botons" type="button" value="Ver Urna" class="Confirmar">
+                <div class="botn"><input class="botons" type="button" value="Ver Urna" class="Confirmar"></div>
             </div>
         
                 <input type="hidden" class="id" value="<%=Datos.IdUrna%>" id="valor">
                 
            
-                <div  class="botones3" id="botones<%=Datos.IdUrna%>">
+        
          
                 </div>
             <canvas class="estadisticafondo" id="myChart<%=Datos.IdUrna%>" ></canvas>
@@ -111,8 +111,8 @@
                  $(document).ready(function(){
                     $('.close-btn').on('click',function(){
      
-        $('.alert').addClass("hide");
-      $('.alert').removeClass("show");
+        $('.alert').addClass("alert2");
+      $('.alert').removeClass("alert");
       });
 
       $('.botons').on('click',function(){
