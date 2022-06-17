@@ -174,20 +174,20 @@ button:hover{
     border-radius: 15px;
 }
 .carta:first-child{
-    background-image:  url("../Img/fondo.jpg");
+    background-image:  url("../img/fondo.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
 }
 .carta:nth-child(2){
-    background-image: url("../Img/fondo.jpg");
+    background-image: url("../img/fondo.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
 
 }
 .carta:nth-child(3){
-    background-image: url("../Img/fondo.jpg");
+    background-image: url("../img/fondo.jpg");
  
     background-blend-mode: soft-light;
     background-position: center center;
@@ -195,7 +195,7 @@ button:hover{
 
 }
 .carta:nth-child(4){
-    background-image: url("../Img/noticiaindex.jpg");
+    background-image: url("../img/noticiaindex.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
@@ -256,26 +256,26 @@ footer .container{
         
     }
     .carta:first-child{
-        background-image: url("../Img/voto.jpg");
+        background-image: url("../img/voto.jpg");
         background-position: center center;
         background-size: cover;
         font-weight: bold;
     }
     .carta:nth-child(2){
-        background-image: url("../Img/partidosiondex.webp");
+        background-image: url("../img/partidosiondex.webp");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(3){
-        background-image: url("../Img/foroindex.png");
+        background-image: url("../img/foroindex.png");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(4){
         
-        background-image: url("../Img/noticiaindex.jpg");
+        background-image: url("../img/noticiaindex.jpg");
         background-position: center center;
         background-size: cover;
     
@@ -302,7 +302,7 @@ footer .container{
         margin-top: 0;
     }
     #somos-proya .img-container{
-        background-image:url("../Img/imagennosotros.webp");
+        background-image:url("../img/imagennosotros.webp");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -349,26 +349,26 @@ footer .container{
     }
 
     .carta:first-child{
-        background-image: url("../Img/voto.jpg");
+        background-image: url("../img/voto.jpg");
         background-position: center center;
         background-size: cover;
         font-weight: bold;
     }
     .carta:nth-child(2){
-        background-image: url("../Img/partidosiondex.webp");
+        background-image: url("../img/partidosiondex.webp");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(3){
-        background-image: url("../Img/foroindex.png");
+        background-image: url("../img/foroindex.png");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(4){
         
-        background-image: url("../Img/noticiaindex.jpg");
+        background-image: url("../img/noticiaindex.jpg");
         background-position: center center;
         background-size: cover;
     
