@@ -80,7 +80,13 @@
                 <input class="botons" type="button" value="Ver Urna" id="evento" class="Confirmar">
             </div>
 
-
+<script>
+    $(document).ready(function(){
+    $('#evento').on('click',function(){
+  alert("toma el boton");
+    });
+});
+</script>
            
         
                 <input type="hidden" class="id" value="<%=Datos.IdUrna%>" id="valor">
