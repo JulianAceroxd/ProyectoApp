@@ -238,7 +238,6 @@ font-family: 'Poppins', sans-serif;
 .contnomde{
     margin-top: 2vh;
     background-color: #FEEEE5;
-    height: 34vh;
     padding-top: 4vh;
 }
 .botons{
@@ -273,9 +272,10 @@ font-family: 'Poppins', sans-serif;
     flex-direction: unset;
 }
 .botones3{
-    background-color: #140902;
+    background-color: #FEEEE5;
     height: 20vh;
     flex-direction: unset;
+
 }
 .formu{
 
