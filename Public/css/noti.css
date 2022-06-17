@@ -14,31 +14,23 @@ html {
     box-sizing: border-box;
 }
 
-body {
 
-    color: #404040;
-    width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-
-
-}
 
 /*=====================================
 estilos de la utilidad
 Copiar esto
 =====================================*/
 .contenedor-comentarios {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: 50%;
-
-    width: 100%;
+    margin-top: 6vh;
+    background-color: #C7DDEC;
+   margin-left: auto;
+   margin-right: auto;
+    width: 60%;
 }
 
 .contenedor-comentarios img {
     width: 100%;
+ 
 }
 
 .area-comentar {
@@ -65,11 +57,14 @@ Copiar esto
 .contenedor-comentarios .comentario-principal-usuario .avatar,
 .area-comentar .avatar {
     display: flex;
-    width: 65px;
+
     height: 65px;
     background-color: #F4F4F4;
     border-radius: 50%;
     overflow: hidden;
+}
+.avatar{
+    margin-left: 2%;
 }
 .comentarios-usuarios .nombre-usuario {
     font-weight: bold;
@@ -162,7 +157,7 @@ Copiar esto
 
 .menu-comentario {
     position: absolute;
-    width: 30px;
+
     height: 30px;
     background-color: #E9E9E9;
     border-radius: 50%;
@@ -218,7 +213,7 @@ Copiar esto
 
 .publicacion-realizada .usuario-publico .avatar,
 .comentarios-usuarios .comentario-principal-usuario .avatar {
-    width: 45px;
+
     height: 45px;
 }
 
@@ -269,7 +264,7 @@ Copiar esto
 
 .comentar-publicacion .avatar,
 .contenedor-sub-comentarios .comentario-principal-usuario .avatar {
-    width: 32px;
+   
     height: 32px;
 }
 
@@ -294,7 +289,7 @@ Copiar esto
 }
 
 .publicacion-realizada .usuario-publico .contenido-publicacion {
-    margin-left: 1rem;
+    margin-left: 5%;
 }
 
 .comentar-publicacion {
@@ -313,10 +308,16 @@ Copiar esto
     margin-bottom: 0.5rem;
     font-size: 0.9em;
 }
+.archivo-publicado{
+   margin-left: 20%;
+
+}
+
 
 .archivo-publicado img {
-    position: relative;
-    width: 100%;
+    
+   
+    width: 70%;
     border-radius: 8px;
 }
 
@@ -429,9 +430,8 @@ color:#ce8500;
     
 }
 
-
 body{
-    background-color: #BCE6F9;
+    background-color: aliceblue;
     font-family: 'Roboto' sans-serif;
     margin: 0;
 }
@@ -451,12 +451,12 @@ a{
 }
 
 header{
+  
     display: flex;
-    min-height: 130px;
+    min-height: 160px;
     background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
     justify-content: space-between;
     align-items: center;
-    width:210vh;
     padding: 10px;
 }
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
@@ -466,9 +466,8 @@ header{
 }
 
 #header {
+    display: flex;
     margin:auto;
-    width:320vh;
-    margin-left: 65vh;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -477,6 +476,7 @@ ul, ol {
 }
 
 .nav > li {
+    text-decoration: none;
     float:left;
 }
 
@@ -486,7 +486,7 @@ ul, ol {
     text-decoration:none;
     font-size: 2vh;
     font-weight: bold;
-    padding:5px 12px;
+    padding:3px 10px;
     display:block;
     border-radius: 2vh;
 }
@@ -533,11 +533,24 @@ nav a{
 nav a:hover{
     color: #A4CBE6;
 }
-@media (max-width:700px){
+@media (max-width:1013px){
+   
     header{
+        font-size: 1px;
         flex-direction: column;
     }
     nav{
         padding: 10px 0px;
+        
+    }
+  
+    .nav li a {
+        color:black;
+        text-decoration:none;
+        font-size: 1.5vh;
+        font-weight: bold;
+        padding:1px 3px;
+        display:block;
+        border-radius: 2vh;
     }
 }

@@ -8,7 +8,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/noti.css">
+    <link rel="stylesheet" href="Css/noti.css">
    
     
 
@@ -23,8 +23,8 @@
             <ul class="nav">
                 <li><a href="/" class="">Inicio</a></li>
                 <li><a href="/urnaespec" class="">Urna</a></li>
-                <li>  <a href="/foros" class="">Foros de discusion</a></li>
-                <li>  <a href="/NotiEspec" class="">Noticias</a></li>
+                <li>  <a href="/foros" class="">Foros</a></li>
+            
                 <li><a href="">Partidos</a>
                     <ul id="partidos">
                     </ul>
@@ -66,7 +66,7 @@
     <div class="publicacion-realizada">
         <div class="usuario-publico">
             <div class="avatar">
-                <img src="img/logo.jpg" alt="img">
+                <img src="Img/logo.jpg" alt="img">
             </div>
             <div class="contenido-publicacion">
                 <h4>Espectador</h4>
@@ -88,22 +88,9 @@
         <div class="archivo-publicado">
             <img src="imagenes/<%=Datos.ImgNoti%>" alt="img">
         </div>
-        <div class="botones-comentario">
-            <button type="" class="boton-puntuar">
-                <i class="fas fa-thumbs-up"></i>
-                45
-            </button>
-            <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdNoti%>">
-                
-                Ver Comentarios
-            </button>
-        </div>
-        <div class="comentarios-usuarios" id="comentarios<%=Datos.IdNoti%>">
-     
-        </div>
+      
 
 </section>
-
     
 <%})%>
 <!--====  End of html  ====-->
@@ -136,5 +123,5 @@ No es necesario que copies esto!
 
 <!--====  End of tarjeta  ====-->
 </body>
-<script src="js/NotiEspec.js"></script>
+<script src="js/Anexos.js"></script>
 </html>
