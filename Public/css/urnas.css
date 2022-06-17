@@ -305,6 +305,7 @@ font-family: 'Poppins', sans-serif;
 }
 .loo{
     margin: 0 auto;
+    margin-left: 70px;
     cursor: pointer;
     
 }
