@@ -2,6 +2,10 @@ $(document).ready(function(){
 
     $('.botons').on('click',function(){
 
+        if('click'>1){
+       alert("calmado gonorrea")
+        }else{
+
     let btn=$('.botons').index(this);
     let doc=$('.id').eq(btn);
     
@@ -43,6 +47,6 @@ $(document).ready(function(){
   alert("toma el boton")
     });
 });
-    
+}
     });
 });
