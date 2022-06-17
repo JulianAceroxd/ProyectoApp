@@ -296,7 +296,7 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
  Controller.Comentario=(req,res,next)=>{  
     const IdUsu=req.body.id;
     const IdNoti=req.body.idnoti
-    const Comentario=req.body;
+    const Comentario=req.body.comentario;
     const likes=0;
 
     console.log(IdUsu,IdNoti,Comentario,likes)
@@ -390,7 +390,7 @@ Controller.Registro=(req,res,next)=>{
         const p=req.body.pass;
         const es="Activo";
         const f=0;
-        const i="1654875053715.png"
+        const i=req.file.filename;
 
         const password=await bcryptjs.hash(p,8)  // INCRPTACION DE CONTRASEÑA POR MEDIO DEL HASH Y SU MODULO BCRYPT.JS
         console.log(n,a,c,p,password)
