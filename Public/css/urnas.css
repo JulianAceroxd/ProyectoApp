@@ -260,7 +260,10 @@ font-family: 'Poppins', sans-serif;
     background: linear-gradient(220deg, #FFDCC7 60%, #FEEEE5 60%);
 }
 .botn{
-    background-color: blue;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+
     
 }
 .buttons:hover{
