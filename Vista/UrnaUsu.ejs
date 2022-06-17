@@ -77,8 +77,17 @@
                 <div class="contnomde">
                 <h1 class="bot"><%=Datos.NomUrna%></h1>
                 <p class="bot"><%=Datos.DesUrna%></p>
-                <input class="botons" type="button" value="Ver Urna" class="Confirmar">
+                <input class="botons" type="button" value="Ver Urna" id="evento" class="Confirmar">
             </div>
+
+<script>
+    $(document).ready(function(){
+    $('#evento').on('click',function(){
+  alert("toma el boton");
+    });
+});
+</script>
+           
         
                 <input type="hidden" class="id" value="<%=Datos.IdUrna%>" id="valor">
                 
