@@ -58,10 +58,11 @@
             <a class="titu">FOROS DISPONIBLES</a>
         </div>
         <ul class="op">
-            <li><a href="/inteforos">que opina sobre los temas actualess de colombiaaa chamoss</a></li>
-            <li><a href="/inteforos">dato 2</a></li>
-            <li><a href="/inteforos">dato 3</a></li>
-            <li><a href="/inteforos">dato sadasdasds4</a></li>
+            <% Datos.forEach(function (Datos){ %>
+            <li><a href="/inteforos/<%=Datos.IdForo%>"><%=Datos.NomForo%></a></li>
+           
+            
+<%})%>
         </ul>
     </div>
   

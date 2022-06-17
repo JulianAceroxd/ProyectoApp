@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/inteforo.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" href="/css/noti.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -54,10 +55,55 @@
     }
     </script>
     <h1 class="titu"><a>Modulo Foros</a></h1>
-    <div class="pre"><a>Pregunnta foro</a></div>
+    <% Datos.forEach(function (Datos){ %>
+        <section class="contenedor-comentarios">
+           
+            <div class="publicacion-realizada">
+                <div class="usuario-publico">
+                    <div class="avatar">
+                        <img src="/img/petrolover.jpg" alt="img">
+                    </div>
+                  
+                    <div class="contenido-publicacion">
+                      
+                        <ul>
+                            
+                            <li>Hace Un Momento</li>
+                        </ul>
+                        <h4><%=Datos.DesForo%></h4>
+                    </div>
+                    <div class="menu-comentario">
+                        <i class="fas fa-pen"></i>
+                        <ul class="menu">
+                            <li><a href="">Editar</a></li>
+                            <li><a href="">Eliminar</a></li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <p>¡POR FAVOR COMPARTE TU OPINION SOBRE <%=Datos.NomForo%>!</p>
+            
+                <div class="archivo-publicado">
+                    <img src="/img/petrolover.jpg" alt="img">
+                </div>
+                <div class="botones-comentario">
+                 
+                    <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdForo%>">
+                        
+                        Ver Comentarios
+                    </button>
+                </div>
+                <div class="comentarios-usuarios" id="comentarios<%=Datos.IdForo%>">
+             
+                </div>
+        
+        </section>
+        
+            
+        <%})%>
 
    
 </body>
-<script src="js/Anexos.js"></script>
+<script src="../js/Urna.js"></script>
 </html>
 

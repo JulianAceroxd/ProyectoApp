@@ -148,6 +148,35 @@ res.render('index')               //aca creamas nuestro controlador index o raiz
 res.send("ERROR DE CONTROLADOR");
 
 }
+Controller.ForosEspec=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+  
+    cnn.query('SELECT * FROM tbforos',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+            if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                next(new Error(err));
+                console.log("ERROR EN LA CONSULTA");
+            }   
+            else{
+                console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                res.render('foros',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+            }
+        })
+    
+    }
+Controller.DetForoEspec=(req,res,next)=>{
+        const {id}=req.params;
+        
+        
+        cnn.query('SELECT * FROM tbforos where IdForo=?',[id],(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+            if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                next(new Error(err));
+                console.log("ERROR EN LA CONSULTA");
+            }   
+            else{
+                console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                res.render('inteforo',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+            }
+        })
+        }
 
 //CONTROLADOR DE USUARIOS
 
@@ -180,7 +209,7 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
             })
         
         }
-   Controller.PartidoUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha          
+ Controller.PartidoUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha          
             const {id}=req.params;  //POR MEDIO DEL CONST ALMACENAMOS EN LETRAS LOS VALORES DE LA PAGINA A INSERTAR,GRACIAS ESTO A LA RUTAS
         
         
@@ -212,10 +241,10 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
         
         }
 
- Controller.comentarios=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+ Controller.comentariosForo=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
     const {id}=req.body;
-    console.log(id)
-   cnn.query('SELECT u.NomUsu, u.ApeUsu, c.ComentarioNoti,c.likes,c.IdComentarioNoti, n.IdNoti, u.Img FROM tbnoticias AS n RIGHT JOIN tbcomennoticias AS c ON n.IdNoti = c.IdNoti JOIN tbusuarios AS u ON c.IdUsu=u.IdUsu WHERE n.IdNoti=?',[id],(err,resbd)=>{   //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+    console.log("Aca va el id del foro"+id)
+   cnn.query('SELECT u.NomUsu, u.ApeUsu,u.Img, r.Respuesta,r.IdComentario, r.IdForo FROM tbforos AS f RIGHT JOIN tbresforo AS r ON  f.IdForo=r.IdForo JOIN tbusuarios AS u ON r.IdUsu=u.IdUsu WHERE f.IdForo=?',[id],(err,resbd)=>{   //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
                     if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
                         next(new Error(err));
                         console.log("ERROR EN LA CONSULTA");
@@ -227,7 +256,21 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                 })
             
             } 
-
+            Controller.comentarios=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+                const {id}=req.body;
+                console.log(id)
+               cnn.query('SELECT u.NomUsu, u.ApeUsu, c.ComentarioNoti,c.likes,c.IdComentarioNoti, n.IdNoti, u.Img FROM tbnoticias AS n RIGHT JOIN tbcomennoticias AS c ON n.IdNoti = c.IdNoti JOIN tbusuarios AS u ON c.IdUsu=u.IdUsu WHERE n.IdNoti=?',[id],(err,resbd)=>{   //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                                if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                    next(new Error(err));
+                                    console.log("ERROR EN LA CONSULTA");
+                                }   
+                                else{
+                                    console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                    res.json(resbd);  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                                }
+                            })
+                        
+                        } 
 
  Controller.likes=async(req,res,next)=>{
                     let n=parseInt(req.body.likes);
@@ -272,6 +315,8 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                     })
                     
                     }
+
+                    
 
 
 
@@ -335,14 +380,8 @@ Controller.Registro=(req,res,next)=>{
                                                     res.render('crearforos')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
                                                     res.send("ERROR DE CONTROLADOR");
                                                     }
-                                                    Controller.Foros=(req,res,next)=>{
-                                                        res.render('foros')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
-                                                        res.send("ERROR DE CONTROLADOR");
-                                                        }
-                                                        Controller.inteForos=(req,res,next)=>{
-                                                            res.render('inteforo')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
-                                                            res.send("ERROR DE CONTROLADOR");
-                                                            }
+                                                    
+                                                        
     Controller.insertaru=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECHA
         const r="Usuario";
         const n=req.body.nombre;
