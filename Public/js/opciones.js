@@ -1,7 +1,7 @@
 $(document).ready(function(){
  
     $('#botons').on('click',function(){
-alert("dio click")
+
     let btn=$('.botons').index(this);
     let nn=$('#nombre').eq(btn);
     let ii=$('#id').eq(btn);
@@ -9,7 +9,7 @@ alert("dio click")
     let no=nn.val();
     let i=ii.val();
 
-    alert("esta es la opcion"+no+"este es el id"+i)
+    
 
 
     alert("Opcion Almacenada")

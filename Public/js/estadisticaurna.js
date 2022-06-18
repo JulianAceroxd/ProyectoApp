@@ -44,16 +44,17 @@ console.log("aca va el tamaño"+data.length)
 
  
 
-    var button = ' <form class="for" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
+    var button = ' <form class="for" id="eventos" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
     $('#botones'+d ).append(button);
-    console.log('botones'+d)
-    console.log("aca van los datos"+data[i].Opcion)      
+        
     
   
    
 
-}}
-
+}} 
+$('#eventos').on('click',function(){
+    alert("le diste clickkk")
+        });
  
 
 }
