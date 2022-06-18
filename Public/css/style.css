@@ -12,17 +12,37 @@ body{
 }
 h1{
     font-size: 3.5em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
 }
 h2{
     font-size: 2.7em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
 }
-h3{font-size: 2em;}
-p{font-size: 1.25em;}
+h3{font-size: 2em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ }
+p{font-size: 1.25em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ }
 ul{list-style: none;}
 li{font-size: 1.25em;}
 a{
     text-decoration: none;
     color: black;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
 }
 
 header{
@@ -57,7 +77,10 @@ ul, ol {
 }
 
 .nav li a {
-
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
     color:black;
     text-decoration:none;
     font-size: 2vh;
@@ -72,6 +95,10 @@ ul, ol {
 
 .nav li a:hover {
     background: linear-gradient( 110deg, #62BDF9 60%,  #79B8E1 60%);
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
 }
 
 .nav li ul {
@@ -103,6 +130,10 @@ ul, ol {
     margin-left: 50px;
 }
 nav a{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
     font-weight: 600;
     padding-right: 10px;
 }
@@ -223,6 +254,10 @@ button:hover{
 
 }
 #final h2{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
     font-size: 5vw;
 }
 #final button{
