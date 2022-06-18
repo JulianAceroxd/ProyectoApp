@@ -32,6 +32,7 @@ header{
     background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
     justify-content: space-between;
     align-items: center;
+  
     padding: 10px;
 }
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
@@ -50,7 +51,7 @@ ul, ol {
     list-style:none;
 }
 
-.nav > li {
+.nav > li {  margin-top:22px;
     text-decoration: none;
     float:left;
 }
@@ -61,7 +62,7 @@ ul, ol {
     text-decoration:none;
     font-size: 2vh;
     font-weight: bold;
-    padding:5px 10px;
+    padding:3px 10px;
     display:block;
     border-radius: 2vh;
 }
@@ -162,9 +163,10 @@ button:hover{
 }
 .nuestros-programas h2{
     margin-top: 0;
-    font-size: 3.2em;
+   
 
 }
+
 .nuestros-programas p{
     display: none;
 }
@@ -174,20 +176,20 @@ button:hover{
     border-radius: 15px;
 }
 .carta:first-child{
-    background-image:  url("../img/fondo.jpg");
+    background-image:  url("../Img/fondo.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
 }
 .carta:nth-child(2){
-    background-image: url("../img/fondo.jpg");
+    background-image: url("../Img/fondo.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
 
 }
 .carta:nth-child(3){
-    background-image: url("../img/fondo.jpg");
+    background-image: url("../Img/fondo.jpg");
  
     background-blend-mode: soft-light;
     background-position: center center;
@@ -195,7 +197,7 @@ button:hover{
 
 }
 .carta:nth-child(4){
-    background-image: url("../img/noticiaindex.jpg");
+    background-image: url("../Img/noticiaindex.jpg");
     background-blend-mode: soft-light;
     background-position: center center;
     background-size: cover;
@@ -256,26 +258,26 @@ footer .container{
         
     }
     .carta:first-child{
-        background-image: url("../img/voto.jpg");
+        background-image: url("../Img/voto.jpg");
         background-position: center center;
         background-size: cover;
         font-weight: bold;
     }
     .carta:nth-child(2){
-        background-image: url("../img/partidosiondex.webp");
+        background-image: url("../Img/partidosiondex.webp");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(3){
-        background-image: url("../img/foroindex.png");
+        background-image: url("../Img/foroindex.png");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(4){
         
-        background-image: url("../img/noticiaindex.jpg");
+        background-image: url("../Img/noticiaindex.jpg");
         background-position: center center;
         background-size: cover;
     
@@ -302,7 +304,7 @@ footer .container{
         margin-top: 0;
     }
     #somos-proya .img-container{
-        background-image:url("../img/imagennosotros.webp");
+        background-image:url("../Img/imagennosotros.webp");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -349,26 +351,26 @@ footer .container{
     }
 
     .carta:first-child{
-        background-image: url("../img/voto.jpg");
+        background-image: url("../Img/voto.jpg");
         background-position: center center;
         background-size: cover;
         font-weight: bold;
     }
     .carta:nth-child(2){
-        background-image: url("../img/partidosiondex.webp");
+        background-image: url("../Img/partidosiondex.webp");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(3){
-        background-image: url("../img/foroindex.png");
+        background-image: url("../Img/foroindex.png");
         background-position: center center;
         background-size: cover;
     
     }
     .carta:nth-child(4){
         
-        background-image: url("../img/noticiaindex.jpg");
+        background-image: url("../Img/noticiaindex.jpg");
         background-position: center center;
         background-size: cover;
     
