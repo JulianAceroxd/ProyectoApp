@@ -264,6 +264,7 @@ font-family: 'Poppins', sans-serif;
     text-align: center; 
 }
 .contitu{
+    border: 1px solid black;
     background-color: #00838F;
     width: 80%;
     border-radius: 12px;
@@ -283,7 +284,7 @@ font-family: 'Poppins', sans-serif;
  
 }
 .contnomde{
- 
+    border: 1px solid black;
     background-color: #00838F;
     width: 80%;
     border-radius: 12px;
