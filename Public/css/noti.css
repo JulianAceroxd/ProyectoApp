@@ -99,6 +99,14 @@ Copiar esto
     width: 0;
     height: 0;
 }
+.publicacion-realizada .popo{
+    margin: 12px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+
+}
 
 .boton-file,
 .boton-enviar {
