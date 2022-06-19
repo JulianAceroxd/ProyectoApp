@@ -21,6 +21,9 @@ estilos de la utilidad
 Copiar esto
 =====================================*/
 .contenedor-comentarios {
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 6vh;
     background-color: #C7DDEC;
    margin-left: auto;
@@ -34,6 +37,9 @@ Copiar esto
 }
 
 .area-comentar {
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -56,6 +62,9 @@ Copiar esto
 .publicacion-realizada .usuario-publico .avatar,
 .contenedor-comentarios .comentario-principal-usuario .avatar,
 .area-comentar .avatar {
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
 
     height: 65px;
@@ -67,6 +76,9 @@ Copiar esto
     margin-left: 2%;
 }
 .comentarios-usuarios .nombre-usuario {
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     margin-right: .5rem;
     color: inherit;
@@ -86,6 +98,14 @@ Copiar esto
     visibility: hidden;
     width: 0;
     height: 0;
+}
+.publicacion-realizada .popo{
+    margin: 12px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .boton-file,
@@ -109,12 +129,19 @@ Copiar esto
 /* fin */
 .contenedor-comentarios .comentario-principal-usuario .comentario,
 .area-comentar .inputs-comentarios {
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     flex-grow: 1;
     flex-basis: 0;
     margin-left: .5rem;
 }
 
 .area-comentar .inputs-comentarios {
+
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     margin-left: 1rem;
 }
 
@@ -126,26 +153,41 @@ Copiar esto
     width: 100%;
     border-radius: 12px;
     margin-bottom: .5rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .botones-comentario span.tiempo-comentario {
     font-size: 0.8rem !important;
     color: #9F9F9F;
     margin-left: .25rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .area-comentar .inputs-comentarios .area-comentario {
     padding: 12px 15px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .area-comentar .inputs-comentarios .botones-comentar {
     display: flex;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* comentarios de usuario */
 .comentarios-usuarios .comentario-principal-usuario {
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .usuario-comentario {
@@ -153,6 +195,9 @@ Copiar esto
     display: block;
     margin-bottom: 0.75rem;
     position: relative;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu-comentario {
@@ -165,21 +210,33 @@ Copiar esto
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .usuario-comentario .menu-comentario {
     top: 5px;
     right: -15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .usuario-comentario:hover .menu-comentario {
     display: flex;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .publicacion-realizada .menu-comentario {
     display: flex;
     right: 0;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu-comentario .menu {
@@ -194,27 +251,42 @@ Copiar esto
     opacity: 0;
     visibility: hidden;
     transition: all ease-in 200ms;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu-comentario:hover .menu {
     opacity: 1;
     visibility: visible;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu-comentario .menu a {
     display: block;
     padding: 7px 15px;
     color: inherit;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu-comentario .menu a:hover {
     background-color: #E1E1E1;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .publicacion-realizada .usuario-publico .avatar,
 .comentarios-usuarios .comentario-principal-usuario .avatar {
 
     height: 45px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .comentario-principal-usuario .texto {
@@ -226,11 +298,17 @@ Copiar esto
     font-size: 0.9rem;
     position: relative;
     padding-right: 1.65rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .comentario-principal-usuario .comentar-comentario {
     width: 100%;
     display: flex;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .comentarios-usuarios .comentar-publicacion input[type="text"] {
@@ -243,10 +321,16 @@ Copiar esto
     border-radius: 8px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .botones-comentario {
     display: block;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .botones-comentario button {
@@ -256,6 +340,9 @@ Copiar esto
     font-size: .8rem;
     border-radius: 8px;
     cursor: pointer;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .botones-comentario button:hover {
@@ -266,6 +353,9 @@ Copiar esto
 .contenedor-sub-comentarios .comentario-principal-usuario .avatar {
    
     height: 32px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .boton-enviar i,
@@ -273,6 +363,9 @@ Copiar esto
 .boton-puntuar i,
 .boton-responder i {
     margin-right: .5rem;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* publicacion realizada */
@@ -325,6 +418,9 @@ Copiar esto
     list-style: none;
     font-size: 0.8em;
     color: #909090;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 /*////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -350,10 +446,16 @@ Copiar esto
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 .alert.showAlert{
     opacity: 1;
     pointer-events: auto;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .alert .fa-exclamation-circle{
@@ -366,6 +468,9 @@ Copiar esto
     padding:020px;
     font-size:18px;
     color:#ce8500;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
    }
    .alert .close-btn{
 cursor: pointer;
@@ -375,25 +480,40 @@ top:50%;
 transform:translateY(-50%);
 background:#ffd080;
 padding:20px 18px;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
               
    }
    .alert .msg{
     padding:020px;
 font-size:18px;
 color:#ce8500;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
    }
 
    .close-btn:hover{
     background:#ffc766;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
    }
    .close-btn .fa-times{
     color:#ce8500;
     font-size:22px;
     line-height:40px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 
    }
    .alert.hide{
     animation: hide_slide 1s ease forwards;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 
 }    
 @keyframes hide_slide {
@@ -433,21 +553,45 @@ color:#ce8500;
 body{
     background-color: aliceblue;
     font-family: 'Roboto' sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 h1{
     font-size: 3.5em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 h2{
     font-size: 2.7em;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
-h3{font-size: 2em;}
-p{font-size: 1.25em;}
-ul{list-style: none;}
-li{font-size: 1.25em;}
+h3{font-size: 2em;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;}
+p{font-size: 1.25em;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;}
+ul{list-style: none;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;}
+li{font-size: 1.25em;
+font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;}
 a{
     text-decoration: none;
     color: black;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -458,6 +602,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
 * {
@@ -469,14 +616,23 @@ header{
     display: flex;
     margin:auto;
     font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul, ol {
     list-style:none;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav > li {
     text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     float:left;
 }
 
@@ -489,9 +645,15 @@ ul, ol {
     padding:3px 10px;
     display:block;
     border-radius: 2vh;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 .op{
     width: 14vh;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav li a:hover {
@@ -502,6 +664,9 @@ ul, ol {
     display:none;
     position:absolute;
     min-width:140px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav li:hover > ul {
@@ -510,6 +675,9 @@ ul, ol {
 
 .nav li ul li {
     position:relative;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav li ul li ul {
@@ -529,18 +697,30 @@ ul, ol {
 nav a{
     font-weight: 600;
     padding-right: 10px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 nav a:hover{
     color: #A4CBE6;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 @media (max-width:1013px){
    
     header{
         font-size: 1px;
         flex-direction: column;
+        font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     }
     nav{
         padding: 10px 0px;
+        font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
         
     }
   
@@ -552,5 +732,8 @@ nav a:hover{
         padding:1px 3px;
         display:block;
         border-radius: 2vh;
+        font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
     }
 }
