@@ -201,6 +201,27 @@ Controller.DetForoEspec=(req,res,next)=>{
                 }
             })
             }
+            Controller.ValidarVotos=(req,res,next)=>{
+                console.log("entra")
+               
+                const id=req.body.id;
+               
+               const sub=req.body.id2;
+        
+                console.log(id)
+                console.log(sub)
+             
+                cnn.query('SELECT * FROM tbresurna Where IdUrna=? And IdUsu=?',[id,sub],(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                    if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                        next(new Error(err));
+                        console.log("ERROR EN LA CONSULTA");
+                    }   
+                    else{
+                        console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                        res.json(resbd);  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                    }
+                })
+                }
 
         Controller.comentariosForo=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
             const {id}=req.body;
@@ -355,6 +376,7 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                     })
                     
                     }
+ 
 
                     
 

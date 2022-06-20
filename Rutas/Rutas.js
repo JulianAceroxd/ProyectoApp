@@ -11,6 +11,7 @@ Rutas.get('/ForosEspec',Controller.ForosEspec);
 Rutas.post('/comentariosForo',Controller.comentariosForo);
 Rutas.get('/DeForosEspec/:id',Controller.DetForoEspec);
 Rutas.post('/subforo',Controller.SubForoEspec);
+Rutas.post('/ValidarVotos',Controller.ValidarVotos);
 ///
 
 ///RUTAS DEL USUARIO.
