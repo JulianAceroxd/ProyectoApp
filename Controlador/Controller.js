@@ -165,6 +165,8 @@ Controller.ForosEspec=(req,res,next)=>{    //creamos una consulta de usuarios po
 Controller.DetForoEspec=(req,res,next)=>{
         const {id}=req.params;
         
+
+        
         
         cnn.query('SELECT * FROM tbforos where IdForo=?',[id],(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
             if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
@@ -177,6 +179,44 @@ Controller.DetForoEspec=(req,res,next)=>{
             }
         })
         }
+
+        Controller.SubForoEspec=(req,res,next)=>{
+            console.log("entra")
+           
+            const id=req.body.id;
+           
+           const sub=req.body.id2;
+    
+            console.log(id)
+            console.log(sub)
+         
+            cnn.query('SELECT res.IdForo,sub.IdComentario,u.NomUsu, u.ApeUsu,u.Img, res.Respuesta,sub.SubComentario FROM tbresforo AS res RIGHT JOIN tbsubforo AS sub ON  res.IdForo=sub.IdForo and res.IdComentario=sub.IdComentario JOIN tbusuarios AS u ON sub.IdUsu=u.IdUsu where res.IdForo=? and sub.IdComentario=?',[id,sub],(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                    next(new Error(err));
+                    console.log("ERROR EN LA CONSULTA");
+                }   
+                else{
+                    console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                    res.json(resbd);  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                }
+            })
+            }
+
+        Controller.comentariosForo=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+            const {id}=req.body;
+            console.log("Aca va el id del foro"+id)
+           cnn.query('SELECT u.NomUsu, u.ApeUsu,u.Img, r.Respuesta,r.IdComentario, r.IdForo FROM tbforos AS f RIGHT JOIN tbresforo AS r ON  f.IdForo=r.IdForo JOIN tbusuarios AS u ON r.IdUsu=u.IdUsu WHERE f.IdForo=?',[id],(err,resbd)=>{   //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                            if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                next(new Error(err));
+                                console.log("ERROR EN LA CONSULTA");
+                            }   
+                            else{
+                                console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                res.json(resbd);  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                            }
+                        })
+                    
+                    } 
 
 //CONTROLADOR DE USUARIOS
 
@@ -256,7 +296,7 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                 })
             
             } 
-            Controller.comentarios=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+ Controller.comentarios=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
                 const {id}=req.body;
                 console.log(id)
                cnn.query('SELECT u.NomUsu, u.ApeUsu, c.ComentarioNoti,c.likes,c.IdComentarioNoti, n.IdNoti, u.Img FROM tbnoticias AS n RIGHT JOIN tbcomennoticias AS c ON n.IdNoti = c.IdNoti JOIN tbusuarios AS u ON c.IdUsu=u.IdUsu WHERE n.IdNoti=?',[id],(err,resbd)=>{   //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 

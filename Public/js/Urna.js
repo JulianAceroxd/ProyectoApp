@@ -6,9 +6,12 @@ $(document).ready(function(){
      let id=$('.comentario-principal-usuario').eq(btn);
      let d=id.val();
     
+    
+             
      const d2={
-                id: d
-            };
+        id: d,
+      
+    };
             
      let url='/comentariosforo'
                      fetch(url,{
@@ -32,7 +35,14 @@ $(document).ready(function(){
                     body+='<H1>Aun No Existen Comentarios Se El Primero En Comentar!</H1>'
                    document.getElementById('comentarios'+data[i].IdForo).innerHTML=body
                 }else{
+
+
+
+                   
+                  
                 body+=`
+
+                <div></div>
                     <div class="comentario-principal-usuario">
                 <div class="avatar">
                                 <img src="/imagenes/${data[i].Img}" alt="img">
@@ -49,25 +59,32 @@ $(document).ready(function(){
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="botones-comentario">
-    
-                                       
-    
-                                        <span class="tiempo-comentario">
-                                            hece 3 min
-                                        </span>
+                                        <div class="botones-comentario">
+                                         
+                                        <button type="submit" onclick="TomaBoton(${data[i].IdComentario},${data[i].IdForo})" class="comentario-principal-usuario2" id="Mondongo" value="PETROLOVER" ONE>
+                                           
+                                            Ver Sub Comentarios
+                                        </button>
+                                    </div>
+                                    <div id="prueba${data[i].IdForo}">
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                 
                         `        
-                      
+
+                       
                    console.log(    document.getElementById('comentarios'+data[i].IdForo).innerHTML=body)
                       
             }
-           }
-          }
+          
+       
+        
+    }
+}
+          
     
          
           

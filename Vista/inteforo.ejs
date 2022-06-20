@@ -96,13 +96,60 @@
                 <div class="comentarios-usuarios" id="comentarios<%=Datos.IdForo%>">
              
                 </div>
-        
+                <div id="prueba5">
+
+                </div>
         </section>
         
             
         <%})%>
 
-   
+   <script>
+     function TomaBoton(c,f){
+
+        const d3={
+                        id: f,
+                        id2:c
+                    };
+
+                    let url='/subforo'
+                    fetch(url,{
+               method:'POST',
+               headers:{
+                   
+           
+                   "content-Type":"application/json",
+               },
+               body: JSON.stringify(d3),
+              })
+                     .then(response=>response.json())
+                     .then(data2=>mostrar2(data2))
+                     .catch(error=>console.log(error))
+                     const mostrar2=(data2)=>{
+                        let body2=''
+                for(i2=0; i2<=data2.length;i2++){
+                    
+                    alert(data2[i2].SubComentario)
+
+                    body2+=`<div class="usuario-comentario">
+                                    <div class="texto">
+                                        <a href="#" title="" class="nombre-usuario">${data2[i2].NomUsu} ${data2[i2].ApeUsu} :</a> ${data2[i2].SubComentario}
+                                        <div class="menu-comentario">
+                                            <i class="fas fa-pen"></i>
+                                            <ul class="menu">
+                                                <li><a href="">Editar</a></li>
+                                                <li><a href="">Eliminar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                     `
+             }
+            document.getElementById('prueba'+data2[i2].IdForo).innerHTML=body2;
+        }
+                         
+                          }
+   </script>
 </body>
 <script src="../js/Urna.js"></script>
 </html>
