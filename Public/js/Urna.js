@@ -113,15 +113,16 @@ body: JSON.stringify(d3),
       .then(data2=>mostrar2(data2))
       .catch(error=>console.log(error))
       const mostrar2=(data2)=>{
-       
+        if(data2.length<1){
+            alert("Joa Mani Aun No Hay Sub Comentarios");
+        }else{
         const idsub= data2[0].IdComentario
         console.log(idsub);
         const SubComentario=document.getElementById('sub'+idsub)
         const template2=document.querySelector('#Template-2').content
         const fragment2=document.createDocumentFragment()
-        if(data2.length<=0){
-            alert("Joa Mani Aun No Hay SubComentarios");
-        }else{
+        console.log(data2.length)
+       
         
  for(i2=0; i2<data2.length;i2++){
     let foto2='/imagenes/'+data2[i2].Img;
