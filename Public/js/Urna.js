@@ -119,7 +119,9 @@ body: JSON.stringify(d3),
         const SubComentario=document.getElementById('sub'+idsub)
         const template2=document.querySelector('#Template-2').content
         const fragment2=document.createDocumentFragment()
-        
+        if(data2.length<=0){
+            alert("Joa Mani Aun No Hay SubComentarios");
+        }else{
         
  for(i2=0; i2<data2.length;i2++){
     let foto2='/imagenes/'+data2[i2].Img;
@@ -146,6 +148,7 @@ body: JSON.stringify(d3),
 
 SubComentario.appendChild(fragment2)
 console.log(SubComentario);
+}
 }
         })
         
