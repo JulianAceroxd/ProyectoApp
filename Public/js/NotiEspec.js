@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $('.comentario-principal-usuario').on('click',function(){
-    
+    alert("si deseas participar registrate o inicia sesion!")
     let btn=$('.comentario-principal-usuario').index(this);
      let id=$('.comentario-principal-usuario').eq(btn);
      let d=id.val();
@@ -51,16 +51,13 @@ $(document).ready(function(){
                                     </div>
                                     <div class="botones-comentario">
                                          
-                                       
-                                            <input type="hidden" placeholder="Usuario" name="id" value="${data[i].IdComentarioNoti}"required>
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <input type="submit" class="boton-puntuar" name="likes" value="${data[i].likes}">
+
                                        
                                        
                                 
     
                                         <span class="tiempo-comentario">
-                                            hece 3 min
+                                            hecho 3 min
                                         </span>
                                     </div>
                                 </div>
@@ -71,9 +68,7 @@ $(document).ready(function(){
                       
                    console.log(    document.getElementById('comentarios'+data[i].IdNoti).innerHTML=body)
                    
-                   $('.boton-puntuar').on('click',function(){
-                        alert("Si deseeas participar en esta seccion inicia sesion o registrate")
-                  });
+                
                    
                       
             }
