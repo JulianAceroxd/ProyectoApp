@@ -13,6 +13,11 @@
 
         <img  class="avatar" src="/imagenes/<%= Img%>">
         <h1 class="user_name"><%= Nombre%></h1>
+        <form action="/foto" method="post" enctype="multipart/form-data">
+            <input type="file" name="img" id="">
+            <input type="hidden" name="idusu" value="<%= IdUsu%>" id="">
+          
+        </form>
 
     </div>
     <ul class="socials">
@@ -42,15 +47,7 @@
                 <input type="text" placeholder="Apellido" name="Apellido" value="<%= Apellido%>">
                 <input type="text" placeholder="Usuario" name="Usuario" value="<%= Usuario%>">
                 <input type="password" placeholder="Clave" name="Password" value="<%= Clave%>" >
-                <form action="/foto" method="post" enctype="multipart/form-data">
-
-
-                    
-
-                    <input type="file" name="img" id="">
-                    <input type="hidden" name="idusu" value="<%= IdUsu%>" id="">
-                  
-                </form>
+            
 
                 <input class="boton" type="submit" value="Actualizar datos">
             </form>
