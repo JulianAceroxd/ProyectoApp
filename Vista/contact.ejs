@@ -21,16 +21,28 @@
             <a href="">Apellido</a>
         </li>
         <li>
-            <a href="">Correo</a>
+            <a href="">Usuario</a>
         </li>
         <li>
             <a href="">Clave</a>
         </li>
     </ul>
     <div class="about">
-        <h3 >Acerca de</h3>
-        <p>Descripcion personal
-        </p>
+        <h3>Acerca de</h3>
+        <p>Descripcion personal</p>
+    </div>
+    <div class="container">
+        <div class="container_form">
+            <h2>Datos personales</h2>
+            <form action="/DatosP" method="post">
+             
+                <input type="text" placeholder="Nombre" name="Nombre">
+                <input type="text" placeholder="Apellido" name="Apellido">
+                <input type="text" placeholder="Usuario" name="Usuario">
+                <input type="password" placeholder="Clave" name="Password">
+                <input class="boton" type="submit" value="Actualizar datos">
+            </form>
+        </div>
     </div>
 </body>
 </html>
