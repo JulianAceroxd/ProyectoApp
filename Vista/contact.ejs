@@ -13,12 +13,14 @@
 
         <img  class="avatar" src="/imagenes/<%= Img%>">
         <h1 class="user_name"><%= Nombre%></h1>
+        <div class="actuimg"> 
         <form action="/foto" method="post" enctype="multipart/form-data">
             <input type="file" name="img" id="">
             <input type="hidden" name="idusu" value="<%= IdUsu%>" id="">
             <input type="submit" name="" id="">
           
         </form>
+    </div>
 
     </div>
     <ul class="socials">
