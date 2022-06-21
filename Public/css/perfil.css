@@ -17,6 +17,10 @@
     font-size: 28px;
     margin-top: 14px;
 }
+.about{
+    background-color: chartreuse;
+}
+
 .socials{
     list-style: none;
     text-align: center;
