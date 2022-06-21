@@ -7,7 +7,7 @@ $(document).ready(function(){
          
 contador=contador+1;
 
-if(contador>1){
+if(contador>2){
 
 }else{
       
