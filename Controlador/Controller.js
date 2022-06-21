@@ -20,6 +20,8 @@ Controller.Logine=async(req,res)=>{  //LOGINN
        req.session.Login=true;
        Nombre=results[0].NomUsu;
        Apellido=results[0].ApeUsu;
+       Usuario=results[0].Usuario;
+       Clave=results[0].ClaUsu;
        IdUsu=results[0].IdUsu;
        Img=results[0].Img;
 
