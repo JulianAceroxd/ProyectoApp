@@ -517,6 +517,10 @@ Controller.Registro=(req,res,next)=>{
                                                     res.render('crearforos')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
                                                     res.send("ERROR DE CONTROLADOR");
                                                     }
+                                                    Controller.DatosUsu=(req,res,next)=>{
+                                                        res.render('contact')               //aca creamas nuestro controlador index o raiz, es la primera vista que tendremos al iniciar
+                                                        res.send("ERROR DE CONTROLADOR");
+                                                        }
                                                     
                                                         
     Controller.insertaru=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECHA

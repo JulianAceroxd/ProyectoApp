@@ -19,6 +19,7 @@ Rutas.post('/ValidarVotos',Controller.ValidarVotos);
 Rutas.get('/Usuario',Controller.Usuario);
 Rutas.get('/urnaUsu',Controller.urnaUsu);
 Rutas.get('/NotiUsu',Controller.NotiUsu);
+Rutas.get('/DatosUsu',Controller.DatosUsu);
 Rutas.post('/comentarios',Controller.comentarios);
 Rutas.post('/likes',Controller.likes);
 Rutas.post('/AgrComentarios',Controller.Comentario);
