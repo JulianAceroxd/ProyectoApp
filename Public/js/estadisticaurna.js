@@ -1,9 +1,10 @@
 let contador=0;
-
+let recargar=1;
 $(document).ready(function(){
   
 
     $('.botons').on('click',function(){
+         
 contador=contador+1;
 
 if(contador>1){
@@ -36,12 +37,16 @@ if(contador>1){
     .then(Response=>Response.json())
     .then(data=>mostrarDatos2(data))
     .catch(error=>console.log(error))
+  
     const mostrarDatos2=(data)=>{
+       
+  
         if(data.length>0){
 alert("YA PARTICIPASTE! PARTICIPA EN LAS DEMAS URNAS.")
+
         }else{
     
-
+          alert("Si No Visualisas la opciones prueba con refrescar la pagina")
    const d2={
        id: d
    };
@@ -74,13 +79,19 @@ alert("YA PARTICIPASTE! PARTICIPA EN LAS DEMAS URNAS.")
     
   
    
-
 }} 
 
- 
+fetchMock.reset();
+fetchMock.restore(); 
+
+
 
 }
 }
+
 }
+
     });
+  
 });
+recargar=recargar+1;
