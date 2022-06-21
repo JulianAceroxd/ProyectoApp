@@ -169,7 +169,7 @@ Copiar esto
 .contenedor-comentarios .comentario-principal-usuario .texto,
 .area-comentar .inputs-comentarios .area-comentario {
     border: 0;
-    background-color: #F0F0F0;
+    background-color: #cc1313;
     display: block;
     width: 100%;
     border-radius: 12px;
@@ -715,9 +715,7 @@ button{
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 5);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
-    background: linear-gradient(220deg, #A3A3A3 60%, #C6C6C6 60%);
-
-
+    background: linear-gradient(220deg, #A3A3A3 60%, #C6C6C6 60%)
 }
 button:hover{
     background: linear-gradient(110deg, #A3A3A3 60%,  #C6C6C6 60%);
