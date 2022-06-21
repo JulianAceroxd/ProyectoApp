@@ -24,7 +24,7 @@
             <ul class="nav">
                 <li><a href="/Usuario" class="">Inicio</a></li>
                 <li><a href="/urnaUsu" class="">Ver urnas</a></li>
-                <li><a href="/foros" class="">Foros de discusion</a></li>
+                <li><a href="/ForosUsu" class="">Foros de discusion</a></li>
                 <li><a href="/NotiUsu" class="">Noticias</a></li>
                 <li><a href="">Partidos</a>
                     <ul id="partidos">
@@ -88,10 +88,6 @@
             <img src="/imagenes/<%=Datos.ImgNoti%>" alt="img">
         </div>
         <div class="botones-comentario">
-            <button type="" class="boton-puntuar">
-                <i class="fas fa-thumbs-up"></i>
-                45
-            </button>
             <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdNoti%>">
                 
                 Ver Comentarios
@@ -114,27 +110,13 @@
             <form action="/AgrComentarios" method="post" class="inputs-comentarios">
                 <input type="hidden" value="<%=Datos.IdNoti%>" name="idnoti">
                 <input type="hidden" value="<%=IdUsu%>" name="id">
-                <textarea name="comentario" class="area-comentario" requireds ></textarea>
+                <textarea name="comentario" class="area-comentario" required></textarea>
                 <button class="boton-enviar" type="submit">
                     <i class="fas fa-paper-plane"></i>
                    
                 </button>
             </form>
-                <form action="#" method="post" class="inputs-comentarios">
-                <div class="botones-comentar">
-                    <div class="boton-subir-archivo">
-                        <label class="boton-file" for="adjuntar">
-                            <i class="far fa-image"></i>
-                           
-                        </label>
-                        <input type="file" name="" value="" placeholder="" id="adjuntar">
-                    </div>
-                    <button class="boton-enviar" type="sutmit">
-                        <i class="fas fa-paper-plane"></i>
-                        
-                    </button>
-                </div>
-            </form>
+             
         </div>
         
     </div>
