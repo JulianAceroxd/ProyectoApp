@@ -242,7 +242,35 @@ Controller.DetForoEspec=(req,res,next)=>{
                     } 
 
 //CONTROLADOR DE USUARIOS
+Controller.cambiarfoto=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECH
+    
+    const d=req.body.idusu;
+    const i=req.file.filename;
+        //POR MEDIO DEL CONST ALMACENAMOS EN LETRAS LOS VALORES DE LA PAGINA A INSERTAR,GRACIAS ESTO A LA RUTAS
+    console.log(d+i)
+  
+    cnn.query('UPDATE tbusuarios SET  Img="'+i+'" WHERE IdUsu="'+d+'"',async(err,resbd)=>{// CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
+    if(err){
+       
 
+     //NOS MUESTRA EL ERROR POR MEDIO DEL IF
+    }
+    else{
+        console.log(resbd);
+        res.render('/', {
+            alert: true,
+            alertTitle: "CORRECTO",
+            alertMessage: "¡SE AGREGO Al INTEGRANTE!'",
+            alertIcon:'success',
+            showConfirmButton: false,
+            timer: 1500,
+            ruta: 'Admi'  
+        });  //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
+    }
+    });
+
+
+    }
 Controller.urnaUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
   
     cnn.query('SELECT * FROM tburna',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
