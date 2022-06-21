@@ -94,8 +94,16 @@ a{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
+}
+header{
   
-
+    display: flex;
+    min-height: 160px;
+    background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 10px;
 }
 h2{
     text-align: center;

@@ -20,7 +20,8 @@ Rutas.get('/Usuario',Controller.Usuario);
 Rutas.get('/urnaUsu',Controller.urnaUsu);
 Rutas.get('/NotiUsu',Controller.NotiUsu);
 Rutas.get('/DatosUsu',Controller.DatosUsu);
-Rutas.post('/comentarios',Controller.comentarios);
+//Rutas.post('/comentarios',Controller.comentarios);
+Rutas.post('/foto',Controller.cambiarfoto);
 Rutas.post('/likes',Controller.likes);
 Rutas.post('/AgrComentarios',Controller.Comentario);
 Rutas.get('/partido/:id',Controller.PartidoUsu);
@@ -76,7 +77,7 @@ Rutas.post('/Insertar',Controller.insertaru);
 Rutas.post('/Insertarparti',Controller.insertarpartido);
 //Rutas.post('/Insertarforo',Controller.insertarforo);
 Rutas.post('/Logine',Controller.Logine);
-Rutas.get('/DatosP',Controller.DatosP); // POR MEDIO DE EL ACTION QUE TENEMOS EN EL LOGIN, SE LLEVA ESA INFORMACION A NUESTRO CONTROLER Y GENERA LA RUTA
+Rutas.post('/DatosP',Controller.DatosP); // POR MEDIO DE EL ACTION QUE TENEMOS EN EL LOGIN, SE LLEVA ESA INFORMACION A NUESTRO CONTROLER Y GENERA LA RUTA
 
 
 module.exports=Rutas;
