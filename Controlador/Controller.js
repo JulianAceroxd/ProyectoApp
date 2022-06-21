@@ -257,7 +257,7 @@ Controller.cambiarfoto=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIO
     }
     else{
         console.log(resbd);
-        res.render('/', {
+        res.render('index', {
             alert: true,
             alertTitle: "CORRECTO",
             alertMessage: "¡SE AGREGO Al INTEGRANTE!'",
