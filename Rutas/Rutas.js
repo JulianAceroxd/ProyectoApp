@@ -9,6 +9,9 @@ Rutas.get('/NotiEspec',Controller.NotiEspec);
 Rutas.get('/partidoespec/:id',Controller.PartidoEspec);
 Rutas.get('/ForosEspec',Controller.ForosEspec);
 Rutas.post('/comentariosForo',Controller.comentariosForo);
+Rutas.get('/DeForosEspec/:id',Controller.DetForoEspec);
+Rutas.post('/subforo',Controller.SubForoEspec);
+Rutas.post('/ValidarVotos',Controller.ValidarVotos);
 ///
 
 ///RUTAS DEL USUARIO.
@@ -61,7 +64,6 @@ Rutas.get('/login',Controller.Iniciar);
 Rutas.get('/partidos',Controller.Partidos);
 Rutas.get('/noticias',Controller.Noticias);
 
-Rutas.get('/inteforos/:id',Controller.DetForoEspec);
 Rutas.get('/crearparti',Controller.CrePartidos); 
 Rutas.get('/crearUrna',Controller.CreUrnas);  //HACEMOS LLAMADO DE EL CONTROLADOR INDEX QUE ES NUESTR ARCHIVO O RAIZ PRINCIPAL
 Rutas.post('/Insertar',Controller.insertaru);

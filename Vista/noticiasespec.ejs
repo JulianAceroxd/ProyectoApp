@@ -8,14 +8,11 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/noti.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/noti.css">
    
     
 
-</head>
+</head> 
 
 <body>
     <header>
@@ -24,18 +21,25 @@
         </a>
         <div id="header">
             <ul class="nav">
-                <li><a href="/" class="">Inicio</a></li>
-                <li><a href="/urnaespec" class="">Urna</a></li>
-                <li>  <a href="/ForosEspec" class="">Foros</a></li>
-            
-                <li><a href="">Partidos</a>
-                    <ul id="partidos">
-                    </ul>
-                </li>
-                <li> <a href="/login" class="">Login</a></li>
-                <li>  <a href="/Registro" class="">Registrate</a></li>
+               
+        <li><a href="/" class="">Inicio</a></li> 
+        <li>  <a href="/urnaespec" class="">Urna</a></li>
+        <li>  <a href="/ForosEspec" class="">Foros</a></li>
+        <li><a href="">Partidos</a>
+            <ul id="partidos">
+
             </ul>
-        </div>
+        </li>
+        <li> <a href="/login" class="">Login</a></li>
+        <li>  <a href="/Registro" class="">Registrate</a></li>
+            <nav>
+              
+                <!--<a href="/crearparti" class="">crearpartido</a>
+                <a href="/crearforo" class="">crearforo</a>
+                <a href="/crearurna" class="">crearurna</a>
+                <a href="/admin" class="">Administrador</a>-->
+                
+            </nav>
     </header>
     <script>
         let =url='/partidos'
@@ -72,7 +76,7 @@
                 <img src="img/logo.jpg" alt="img">
             </div>
             <div class="contenido-publicacion">
-                <h4>Espectador</h4>
+                <h4>Administrador</h4>
                 <ul>
                     <li>Hace 3 min</li>
                 </ul>
@@ -86,13 +90,29 @@
             </div>
            
         </div>
-        <p class="popo"><%=Datos.NomNoti%>:</p>
-        <p class="popo"><%=Datos.DesNoti%></p>
+        <p><%=Datos.NomNoti%>:</p>
+        <p><%=Datos.DesNoti%></p>
         <div class="archivo-publicado">
-            <img src="imagenes/<%=Datos.ImgNoti%>" alt="img">
+            <img src="/imagenes/<%=Datos.ImgNoti%>" alt="img">
         </div>
-      
+        <div class="botones-comentario">
+            <button type="" class="boton-puntuar">
+                <i class="fas fa-thumbs-up"></i>
+                45
+            </button>
+            <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdNoti%>">
+                
+                Ver Comentarios
+            </button>
+        </div>
+    </div>
+    <div class="comentarios-usuarios" id="comentarios<%=Datos.IdNoti%>">
+     
+    </div>
 
+   
+        
+    </div>
 </section>
     
 <%})%>
@@ -126,5 +146,5 @@ No es necesario que copies esto!
 
 <!--====  End of tarjeta  ====-->
 </body>
-<script src="js/Anexos.js"></script>
+<script src="js/NotiEspec.js"></script>
 </html>

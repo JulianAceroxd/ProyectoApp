@@ -18,6 +18,30 @@ if(contador>1){
     let d=doc.val();
     let idu=usu.val();
 
+
+    const d3={
+        id: d,
+        id2:idu
+
+    };
+    let =url='/ValidarVotos'
+    fetch(url,{
+     method:'POST',
+     headers:{
+ 
+         "content-Type":"application/json",
+     },
+     body: JSON.stringify(d3),
+    })
+    .then(Response=>Response.json())
+    .then(data=>mostrarDatos2(data))
+    .catch(error=>console.log(error))
+    const mostrarDatos2=(data)=>{
+        if(data.length>0){
+alert("YA PARTICIPASTE! PARTICIPA EN LAS DEMAS URNAS.")
+        }else{
+    
+
    const d2={
        id: d
    };
@@ -37,14 +61,14 @@ if(contador>1){
    const mostrarDatos=(data)=>{
 
 
-console.log("aca va el tamaño"+data.length)
+
 
 
    for(i=0; i<data.length;i++){
 
  
 
-    var button = ' <form class="for" id="eventos" action="Votos" method="post"><div class="loo"><input  type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
+    var button = ' <form class="for" id="eventos" action="Votos" method="post"><div class="loo"><input   type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
     $('#botones'+d ).append(button);
         
     
@@ -52,11 +76,11 @@ console.log("aca va el tamaño"+data.length)
    
 
 }} 
-$('#eventos').on('click',function(){
-    alert("le diste clickkk")
-        });
+
  
 
+}
+}
 }
     });
 });
