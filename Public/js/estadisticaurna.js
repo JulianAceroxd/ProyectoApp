@@ -45,7 +45,7 @@ if(contador>1){
 alert("YA PARTICIPASTE! PARTICIPA EN LAS DEMAS URNAS.")
 
         }else{
-    
+   
           alert("Si No Visualisas la opciones prueba con refrescar la pagina")
    const d2={
        id: d
