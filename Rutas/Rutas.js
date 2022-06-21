@@ -21,7 +21,7 @@ Rutas.get('/urnaUsu',Controller.urnaUsu);
 Rutas.get('/NotiUsu',Controller.NotiUsu);
 Rutas.get('/DatosUsu',Controller.DatosUsu);
 //Rutas.post('/comentarios',Controller.comentarios);
-Rutas.post('/foto',Controller.cambiarfoto);
+//Rutas.post('/foto',Controller.cambiarfoto);
 Rutas.post('/likes',Controller.likes);
 Rutas.post('/AgrComentarios',Controller.Comentario);
 Rutas.get('/partido/:id',Controller.PartidoUsu);
