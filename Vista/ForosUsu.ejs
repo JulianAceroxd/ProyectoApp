@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-    <link rel="icon" href="img/logo.jpg">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <title>Usuario</title>
+    <link rel="stylesheet" href="./css/foros.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Foros</title>
 </head>
 <body>
-    <script>
-     swal("BIENVENID@!", "<%= Nombre%> <%= Apellido%>!", "success");
-    </script>
-
     <header>
         <a href="#" class="logo">
             <img src="/img/logo.jpg" alt="logo">
@@ -23,7 +19,7 @@
             <ul class="nav">
                 <li><a href="/Usuario" class="">Inicio</a></li>
                 <li><a href="/urnaUsu" class="">Ver urnas</a></li>
-                <li><a href="/ForosUsu" class="">Foros </a></li>
+                <li><a href="/ForosUsu" class="">Foros de discusion</a></li>
                 <li><a href="/NotiUsu" class="">Noticias</a></li>
                 <li><a href="">Partidos</a>
                     <ul id="partidos">
@@ -44,16 +40,29 @@
         for(i=0; i<data.length;i++){
             body+=`
                 
-                <li><a href="/partido/${data[i].IdPartido}">${data[i].NomPartido}</a></li>
-            
-                    `
-                       
+                        <li><a href="/partido/${data[i].IdPartido}">${data[i].NomPartido}</a></li>
+                    
+                            `
+                    
 
         }
         document.getElementById('partidos').innerHTML=body
+        console.log(body)
     }
     </script>
+       
+    <div class="contenedor">
+        <div class="fonf">
+            <a class="titu">FOROS DISPONIBLES</a>
+        </div>
+        <ul class="op">
+            <% Datos.forEach(function (Datos){ %>
+            <li><a href="/DeForosUsu/<%=Datos.IdForo%>"><%=Datos.NomForo%></a></li>
+           
+            
+<%})%>
+        </ul>
+    </div>
   
-    
 </body>
 </html>
