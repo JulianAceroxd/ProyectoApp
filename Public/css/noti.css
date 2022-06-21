@@ -99,6 +99,27 @@ Copiar esto
     width: 0;
     height: 0;
 }
+.titu{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    
+    font-size: 5vh;
+}
+.titu a{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 14px;
+    
+    font-size: 5vh;
+}
 .publicacion-realizada .popo{
     margin: 12px;
     text-align: center;
@@ -550,12 +571,10 @@ font-family: 'Lobster', cursive;
     
 }
 
+
 body{
     background-color: aliceblue;
     font-family: 'Roboto' sans-serif;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 h1{
@@ -563,35 +582,34 @@ h1{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
+ 
 }
 h2{
     font-size: 2.7em;
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
+ 
 }
 h3{font-size: 2em;
-font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;}
+    font-family: 'Poppins', sans-serif;
+ }
 p{font-size: 1.25em;
-font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;}
-ul{list-style: none;
-font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;}
-li{font-size: 1.25em;
-font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;}
+    font-family: 'Poppins', sans-serif;
+ }
+ul{list-style: none;}
+li{font-size: 1.25em;}
 a{
     text-decoration: none;
     color: black;
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
+ 
 }
 
 header{
@@ -601,10 +619,8 @@ header{
     background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
     justify-content: space-between;
     align-items: center;
+  
     padding: 10px;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
 * {
@@ -616,28 +632,22 @@ header{
     display: flex;
     margin:auto;
     font-family:Arial, Helvetica, sans-serif;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 
 ul, ol {
     list-style:none;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 
-.nav > li {
+.nav > li {  margin-top:22px;
     text-decoration: none;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
     float:left;
 }
 
 .nav li a {
-
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
     color:black;
     text-decoration:none;
     font-size: 2vh;
@@ -645,28 +655,23 @@ ul, ol {
     padding:3px 10px;
     display:block;
     border-radius: 2vh;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 .op{
     width: 14vh;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 
 .nav li a:hover {
     background: linear-gradient( 110deg, #62BDF9 60%,  #79B8E1 60%);
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+ 
 }
 
 .nav li ul {
     display:none;
     position:absolute;
     min-width:140px;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 
 .nav li:hover > ul {
@@ -675,9 +680,6 @@ ul, ol {
 
 .nav li ul li {
     position:relative;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
 }
 
 .nav li ul li ul {
@@ -695,17 +697,31 @@ ul, ol {
     margin-left: 50px;
 }
 nav a{
-    font-weight: 600;
-    padding-right: 10px;
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
+ 
+    font-weight: 600;
+    padding-right: 10px;
 }
 nav a:hover{
     color: #A4CBE6;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
+    background: linear-gradient(220deg, #A3A3A3 60%, #C6C6C6 60%);
+
+
+}
+button:hover{
+    background: linear-gradient(110deg, #A3A3A3 60%,  #C6C6C6 60%);
+
 }
 @media (max-width:1013px){
    
