@@ -99,6 +99,16 @@ Copiar esto
     width: 0;
     height: 0;
 }
+.titu{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    
+    font-size: 5vh;
+}
 .publicacion-realizada .popo{
     margin: 12px;
     text-align: center;
