@@ -85,6 +85,9 @@ ul, ol {
 }
 .op{
     width: 14vh;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav li a:hover {
@@ -353,6 +356,9 @@ footer .container{
     margin: 1px;
     display: flex;
   justify-content: center;
+  font-family: 'Lobster', cursive;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
     margin: 0 auto;
 
 }
