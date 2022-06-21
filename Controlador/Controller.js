@@ -377,8 +377,83 @@ Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
                     
                     }
  
+ Controller.ForosUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+  
+                        cnn.query('SELECT * FROM tbforos',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                                if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                    next(new Error(err));
+                                    console.log("ERROR EN LA CONSULTA");
+                                }   
+                                else{
+                                    console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                    res.render('ForosUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                                }
+                            })
+                        
+                        }
 
+ Controller.DetForoUsu=(req,res,next)=>{
+                            const {id}=req.params;
+                            
                     
+                            
+                            
+                            cnn.query('SELECT * FROM tbforos where IdForo=?',[id],(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                                if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                    next(new Error(err));
+                                    console.log("ERROR EN LA CONSULTA");
+                                }   
+                                else{
+                                    console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                    res.render('DForosUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                                }
+                            })
+                            }
+                            Controller.ComentarioForo=(req,res,next)=>{  
+                                const IdUsu=req.body.uu;
+                                const IdForo=req.body.ff
+                                const Comentario=req.body.cc;
+                                
+                            
+                               
+                                  //creamos una consulta de usuarios por medio de la funcion flecha
+                                cnn.query('INSERT INTO tbresforo SET?',{IdForo:IdForo,IdUsu:IdUsu,Respuesta:Comentario},(err,resbd)=>{ 
+                                          cnn.query('SELECT * FROM tbnoticias',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                                                        if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                                            next(new Error(err));
+                                                            console.log("ERROR EN LA CONSULTA");
+                                                        }   
+                                                        else{
+                                                            console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                                            res.render('DForosUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                                                        }
+                                                    })
+                                                })
+                                                
+                                                } 
+                                                 Controller.ComentarioSub=(req,res,next)=>{  
+                                                    const IdUsu=req.body.uu;
+                                                    const IdForo=req.body.ff
+                                                    const idsub=req.body.ss
+                                                    const Comentario=req.body.cc;
+                                                    
+                                                
+                                                   
+                                                      //creamos una consulta de usuarios por medio de la funcion flecha
+                                                    cnn.query('INSERT INTO tbsubforo SET?',{IdForo:IdForo,IdUsu:IdUsu,SubComentario:Comentario,IdComentario:idsub},(err,resbd)=>{ 
+                                                              cnn.query('SELECT * FROM tbnoticias',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                                                                            if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                                                                                next(new Error(err));
+                                                                                console.log("ERROR EN LA CONSULTA");
+                                                                            }   
+                                                                            else{
+                                                                                console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                                                                                res.render('DForosUsu',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                                                                            }
+                                                                        })
+                                                                    })
+                                                                    
+                                                                    } 
 
 
 
@@ -643,6 +718,7 @@ console.log("llega mal"+id)
 
 
 }
+
 
 
 Controller.candi=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha

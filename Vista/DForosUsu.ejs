@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/noti.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Foros</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/img/logo.jpg" alt="logo">
+        </a>
+        <div id="header">
+            <ul class="nav">
+                <li><a href="/Usuario" class="">Inicio</a></li>
+                <li><a href="/urnaUsu" class="">Ver urnas</a></li>
+                <li><a href="/ForosUsu" class="">Foros </a></li>
+                <li><a href="/NotiUsu" class="">Noticias</a></li>
+                <li><a href="">Partidos</a>
+                    <ul id="partidos">
+
+                    </ul>
+                </li>
+                <li><a href="/cerrar" class="">Cerrar Sesion</a></li>
+    </header>
+    <script>
+        let =url='/partidos'
+        fetch(url)
+        .then(Response=>Response.json())
+        .then(data=>mostrarDatos(data))
+        .catch(error=>console.log(error))
+        const mostrarDatos=(data)=>{
+        console.log(data)
+        let body=''
+        for(i=0; i<data.length;i++){
+            body+=`
+                
+                        <li><a href="/partidoespec/${data[i].IdPartido}">${data[i].NomPartido}</a></li>
+                    
+                            `
+                    
+
+        }
+        document.getElementById('partidos').innerHTML=body
+        console.log(body)
+    }
+    </script>
+    <h1 class="titu"><a>Modulo Foros</a></h1>
+    <% Datos.forEach(function (Datos){ %>
+        <section class="contenedor-comentarios">
+           
+            <div class="publicacion-realizada">
+                <div class="usuario-publico">
+                    <div class="avatar">
+                        <img src="/img/petrolover.jpg" alt="img">
+                    </div>
+                  
+                    <div class="contenido-publicacion">
+                      
+                        <ul>
+                            
+                            <li>Hace Un Momento</li>
+                        </ul>
+                        <h4><%=Datos.DesForo%></h4>
+                    </div>
+                    <div class="menu-comentario">
+                        <i class="fas fa-pen"></i>
+                        <ul class="menu">
+                            <li><a href="">Editar</a></li>
+                            <li><a href="">Eliminar</a></li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <p>¡POR FAVOR COMPARTE TU OPINION SOBRE <%=Datos.NomForo%>!</p>
+            
+                <div class="archivo-publicado">
+                    <img src="/imagenes/<%=Datos.Img%>" alt="img">
+                </div>
+                <div class="botones-comentario">
+                 
+                    <button type=""  class="comentario-principal-usuario" value="<%=Datos.IdForo%>">
+                        
+                        Ver Comentarios
+                    </button>
+                </div>
+
+                <div class="comentarios-usuarios">
+                    <!-- comentario principal -->
+                   
+                        <div class="area-comentar">
+                        <div class="avatar">
+                            <img src="/imagenes/<%=Img%>" alt="img">
+                          
+                        </div>
+                     <p><%=Nombre%> <%=Apellido%></p>
+                        <form class="inputs-comentarios">
+                            <input type="hidden" value="<%=Datos.IdForo%>" id="idforo">
+                            <input type="hidden" value="<%=IdUsu%>" id="id">
+                            <textarea id="comentario" class="area-comentario" requireds ></textarea>
+                            <button class="boton-enviar" type="button">
+                                <i class="fas fa-paper-plane"></i>
+                               
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+    
+
+<div id="prueba">
+
+</div>
+
+
+                <template id="Template-1">
+                <div class="comentarios-usuarios" id="comentarios">
+                    <div class="comentario-principal-usuario">
+                <div class="avatar">
+                                <img src="" alt="img">
+                            </div>
+                            <div class="comentario">
+                                <div class="usuario-comentario">
+                                    <div class="texto">
+                                        <a href="#" title="" class="nombre-usuario"> : </a> 
+                                        <div class="menu-comentario">
+                                            <i class="fas fa-pen"></i>
+                                            <ul class="menu">
+                                                <li><a href="">Editar</a></li>
+                                                <li><a href="">Eliminar</a></li>
+                                            </ul>
+                                        </div>
+                                        <button type=""  class="comentario-principal-usuario33" id="comentarios" value="">
+                        
+                                            Ver Sub Comentarios
+                                        </button>
+                                    </div>
+
+                                    <div class="sub" id="">
+                                       <div class="com" id="">
+
+                                       </div>
+                                    </div>
+
+
+                               
+
+
+                                   <template id="Template-2">
+                                    <div class="comentarios-usuarios" id="">
+                                        <div class="comentario-principal-usuario" id="mondongo">
+                                    <div class="avatar">
+                                                    <img src="/imagenes/1655695947272.jpeg" alt="img">
+                                                </div>
+                                                <div class="comentario">
+                                                    <div class="usuario-comentario">
+                                                        <div class="texto">
+                                                            <a href="#" title="" class="nombre-usuario"></a> 
+                                                            <div class="menu-comentario">
+                                                                <i class="fas fa-pen"></i>
+                                                                <ul class="menu">
+                                                                    <li><a href="">Editar</a></li>
+                                                                    <li><a href="">Eliminar</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                    <template id="Template-3">
+                                                        <div class="comentarios-usuarios">
+                                                            <!-- comentario principal -->
+                                                           
+                                                                <div class="area-comentar">
+                                                                <div class="avatar">
+                                                                    <img src="/imagenes/<%=Img%>" alt="img">
+                                                                  
+                                                                </div>
+                                                             <p><%=Nombre%> <%=Apellido%></p>
+                                                                <form class="inputs-comentarios">
+                                                                    <input type="hidden" name="idforo" value="<%=Datos.IdForo%>" id="idforo">
+                                                                    <input type="hidden" value="<%=IdUsu%>" id="id">
+                                                                    <input type="hidden" value="" id="idc">
+                                                                    <textarea id="comentariosss" class="area-comentario" required ></textarea>
+                                                                    <button type="button" onclick="capturar()" class="botton">
+
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </template>
+                                                </div>
+                
+                                            </template>
+             
+               <script>
+                function capturar(){
+                    var IdForo=document.getElementById('idforo').value;
+                    var IdUsu=document.getElementById('id').value;
+                    var IdC=document.getElementById('idc').value;
+                    var com=document.getElementById('comentariosss').value;
+
+                  
+                    $.ajax({
+        type:"POST",
+        url:'/AgrComentariosSub',
+       data:{
+            uu:IdUsu,ff:IdForo,cc:com,ss:IdC
+        }
+    });
+               
+               
+                   
+        document.getElementById("comentariosss").value = "";
+        alert("Tu Comentario Se Guardo Correctamente")
+    
+
+    
+ 
+                }
+               </script>
+        </section>
+        
+            
+        <%})%>
+
+ 
+</body>
+<script src="../js/usuforo.js"></script>
+<script src="../js/EnviarForo.js"></script>
+<script src="../js/EnviarSub.js"></script>
+</html>
+

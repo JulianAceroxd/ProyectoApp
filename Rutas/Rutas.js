@@ -12,6 +12,7 @@ Rutas.post('/comentariosForo',Controller.comentariosForo);
 Rutas.get('/DeForosEspec/:id',Controller.DetForoEspec);
 Rutas.post('/subforo',Controller.SubForoEspec);
 Rutas.post('/ValidarVotos',Controller.ValidarVotos);
+
 ///
 
 ///RUTAS DEL USUARIO.
@@ -22,6 +23,10 @@ Rutas.post('/comentarios',Controller.comentarios);
 Rutas.post('/likes',Controller.likes);
 Rutas.post('/AgrComentarios',Controller.Comentario);
 Rutas.get('/partido/:id',Controller.PartidoUsu);
+Rutas.get('/ForosUsu',Controller.ForosUsu);
+Rutas.get('/DeForosUsu/:id',Controller.DetForoUsu);
+Rutas.post('/AgrComentariosForo',Controller.ComentarioForo);
+Rutas.post('/AgrComentariosSub',Controller.ComentarioSub);
 
 
 
