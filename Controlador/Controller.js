@@ -255,6 +255,20 @@ Controller.urnaUsu=(req,res,next)=>{    //creamos una consulta de usuarios por m
         })
     
     }
+    Controller.DatosP=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
+  
+        cnn.query('SELECT * FROM tbusuarios',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
+                if(err){ //VALIDAMOS EL VALOR RECIBIDO SEA ERROR O NO
+                    next(new Error(err));
+                    console.log("ERROR EN LA CONSULTA");
+                }   
+                else{
+                    console.log(resbd) // EN CASO QUE RETORNE RESPUESTA LA VARIABLE DATOS, CONTENDRA LO QUE NOS TRAE DE DESPUESTA
+                    res.render('contact',{Datos:resbd});  //NOS RENDERISA A LA VISTA DONDE LLEVAREMOS LOS DATOS
+                }
+            })
+        
+        }
 
 Controller.NotiUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
   
