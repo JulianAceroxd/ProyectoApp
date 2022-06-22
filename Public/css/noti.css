@@ -52,12 +52,22 @@ Copiar esto
 
 .comentarios-usuarios {
     width: calc(100% - 2.5rem);
+  
 }
 
 .contenedor-comentarios a {
+
     text-decoration: none;
 }
-
+.publicacion-realizada{
+    border-radius: 12px;
+    
+}
+.des p{
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+}
 .comentar-publicacion .avatar,
 .publicacion-realizada .usuario-publico .avatar,
 .contenedor-comentarios .comentario-principal-usuario .avatar,
@@ -76,6 +86,7 @@ Copiar esto
     margin-left: 2%;
 }
 .comentarios-usuarios .nombre-usuario {
+   
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
@@ -355,6 +366,7 @@ Copiar esto
 }
 
 .botones-comentario button {
+  
     display: inline-block;
     border: 0;
     padding: 3px 8px;
@@ -711,12 +723,13 @@ nav a:hover{
 button{
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 2px 2px;
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 5);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
-    background: linear-gradient(220deg, #A3A3A3 60%, #C6C6C6 60%)
+    
+   
 }
+
 button:hover{
     background: linear-gradient(110deg, #A3A3A3 60%,  #C6C6C6 60%);
 
