@@ -13,7 +13,9 @@
     <title></title>
 </head>
 <body>
-   
+   <div id="contenedor-carga">
+<div id="carga"></div>
+   </div>
     <header>
         <a href="#" class="logo">
             <img src="/img/logo.jpg" alt="logo">
@@ -138,7 +140,14 @@
             <p>&copy; Politica Activa 2022</p>
         </div>
     </footer>
-    
+    <script>
+        window.onload=function(){
+            var contenedor=document.getElementById('contenedor-carga');
+
+            contenedor.style.visibility= 'hidden';
+            contenedor.style.opacity='0';
+        }
+    </script>
     
 </body>
 </html>
