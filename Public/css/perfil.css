@@ -4,7 +4,7 @@
 }
 .header{
     text-align: center;
-    height: 300px;
+   
     padding: 12px;
     background-image: url("../img/fondoperfil.webp");
     font-family: 'Lobster', cursive;
@@ -87,8 +87,8 @@ a{
 
 }
 .actuimg input{
-
-    width: 80%;
+    width: 30%;
+    margin-top: 25px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -105,8 +105,8 @@ a{
 header{
   
     display: flex;
-    min-height: 160px;
-    background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
+ 
+    background-color: coral;
     justify-content: space-between;
     align-items: center;
   
