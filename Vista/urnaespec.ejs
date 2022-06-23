@@ -74,7 +74,18 @@
             }
             </script>
             <div class="contitu">
-        <H1 class="titu"><a>Modulo Urnas</a></H1>
+                <H1 class="titu"><a>Modulo Urnas</a></H1>
+                <select class="boton" onload="checkCookies()" id="opcion" name="select">
+                    <option value=""selected>Selecciona El Tipo De Grafico A Visualizar</option>
+                    <option value="bar">Barra</option>
+                    <option value="pie" >Torta</option>
+                    <option value="line">lineas</option>
+                    <option value="doughnut">Doughnut</option>
+                    <option value="polarArea">Polar</option>
+                    <option value="radar">Radar</option>
+                    <option value="scatter">Scatter</option>
+                    
+                  </select>
         </div>
         <div>
             <div id="alert" class="alert show">
@@ -103,90 +114,111 @@
          
              
              <%})%>
-            <script>
+             <script>
                 
-                 $(document).ready(function(){
-                    $('.close-btn').on('click',function(){
-     
-        $('.alert').addClass("alert2");
-      $('.alert').removeClass("alert");
-      });
+                $(document).ready(function(){
+                   $('.close-btn').on('click',function(){
+               
+    
+       $('.alert').addClass("hide");
+     $('.alert').removeClass("show");
+     });
 
-      $('.botons').on('click',function(){
-     
-        $('.alert').addClass("showAlert");
-      $('.alert').addClass("show");
-      $('.alert').addClass("showAlert");
-   })
+     $('.botons').on('click',function(){
+    
+       $('.alert').addClass("showAlert");
+     $('.alert').addClass("show");
+     $('.alert').addClass("showAlert");
+  })
 
+        
+        $('.botons').on('click',function(){
+          
+       
+     
+       let btn=$('.botons').index(this);
+       let doc=$('.id').eq(btn);
+       
+       let d=doc.val();
+    
+  
+       const d2={
+           id: d
+       };
+
+      
+           var x = document.getElementById("opcion").value;
+
+
+
+        if(x===""){
+          alert("Tiene que seleccionar el tipo de grafico!")
+        }else{
+
+       
+        
+     
+       
+               let ctx=document.getElementById('myChart'+d)
+                var myChart=new Chart(ctx,{
+                    type:x,
+                    data:{
+                        datasets:[{
+                            
+                            label:'Estadisticas Urna', 
+                            backgroundColor:['yellow','#87CEFA','red','violet','blue'],
+                            borderColor:['#3F2212'],
+                            borderwidth:3
+                            
+                     } ]
+                    },
+                    options:{
+                        scales:{
+                            y:{
+                                width: 10,
+                               beginAtZeto:true,
+                               maintainAspectRatio: false
+                            }
+                        }
+                    }
+       
+                })
+               
+                let url='/urnadatos'
+                fetch(url,{
+           method:'POST',
+           headers:{
+               
+       
+               "content-Type":"application/json",
+           },
+           body: JSON.stringify(d2),
+          })
+                .then(response=>response.json())
+                .then(data=>mostrar(data))
+                .catch(error=>console.log(error))
+       
+                const mostrar=(data)=>{
+                   console.log (data.length)
+                    data.forEach(element => {
+                        myChart.data['labels'].push(element.Opcion)
+
+                        myChart.data['datasets'][0].data.push((element.cantidad/data.reduce((a,b)=>a+b.cantidad,0))*100)
+
+                        myChart.update();
+                   
+                    });
+                 
+             
+                   } 
+                }
+                
+                
+               });
+             
+       });
          
-         $('.botons').on('click',function(){
-        
-        let btn=$('.botons').index(this);
-        let doc=$('.id').eq(btn);
-        
-        let d=doc.val();
-     
-   
-        const d2={
-            id: d
-        };
-        
-                let ctx=document.getElementById('myChart'+d)
-                 var myChart=new Chart(ctx,{
-                     type:'bar',
-                     data:{
-                         datasets:[{
-                             
-                             label:'Estadisticas Urna', 
-                             backgroundColor:['yellow','#87CEFA','red','violet','blue'],
-                             borderColor:['#3F2212'],
-                             borderwidth:3
-                             
-                      } ]
-                     },
-                     options:{
-                         scales:{
-                             y:{
-                                 width: 10,
-                                beginAtZeto:true,
-                                maintainAspectRatio: false
-                             }
-                         }
-                     }
-        
-                 })
-                
-                 let url='/urnadatos'
-                 fetch(url,{
-            method:'POST',
-            headers:{
-                
-        
-                "content-Type":"application/json",
-            },
-            body: JSON.stringify(d2),
-           })
-                 .then(response=>response.json())
-                 .then(data=>mostrar(data))
-                 .catch(error=>console.log(error))
-        
-                 const mostrar=(data)=>{
-                    console.log (data.length)
-                     data.forEach(element => {
-                         myChart.data['labels'].push(element.Opcion)
-                         myChart.data['datasets'][0].data.push(element.cantidad)
-                         myChart.update();
-                    
-                     });
-                  
-              
-                     
-                 }
-                });
-        });
-                
-            </script>
+           </script>
          
         </body>
         </html>
