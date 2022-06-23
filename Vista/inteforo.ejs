@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/noti.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,23 +14,33 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">
-            <img src="/img/logo.jpg" alt="logo">
-        </a>
-        <div id="header">
-            <ul class="nav">
-                <li><a href="/" class="">Inicio</a></li>
-                <li><a href="/urnaespec" class="">Urna</a></li>
-            
-                <li>  <a href="/NotiEspec" class="">Noticias</a></li>
-                <li><a href="">Partidos</a>
-                    <ul id="partidos">
+
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li ><a  href="/">Inicio</a></li>
+                        <li ><a  href="/urnaespec">Urna</a></li>
+                        <li><a href="/ForosEspec">Foros</a></li>
+                        <li><a href="/NotiEspec">Noticias</a></li>
+                        <li><a href="">Partidos</a>
+                            <ul id="partidos">
+        
+                            </ul>
+                        </li>
+                        <li> <a href="/login">Login</a></li>
                     </ul>
-                </li>
-                <li> <a href="/login" class="">Login</a></li>
-                <li>  <a href="/Registro" class="">Registrate</a></li>
-            </ul>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+          
         </div>
+
     </header>
     <script>
         let =url='/partidos'
@@ -54,7 +64,7 @@
         console.log(body)
     }
     </script>
-    <h1 class="titu"><a>Modulo Foros</a></h1>
+    <center><h1 class="titu">Modulo Foros</h1></center>
     <% Datos.forEach(function (Datos){ %>
         <section class="contenedor-comentarios">
            

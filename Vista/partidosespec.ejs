@@ -5,41 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/partido2.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="/js/jquery-3.6.0.min.js"></script>
-    <title>Css</title>
+    <title>Partidos Espectador</title>
   
 
 </head>
 <body>
     <header>
-        <a href="#" class="logo">
-            <img src="/img/logo.jpg" alt="logo">
-        </a>
-        <div id="header">
-            <ul class="nav">
-               
-        <li><a href="/" class="">Inicio</a></li> 
-        <li><a href="/urnaespec" class="">Urna</a></li>
-        <li>  <a href="/foros" class="">Foros</a></li>
-        <li>  <a href="/NotiEspec" class="">Noticias</a></li>
-        <li><a href="">Partidos</a>
-            <ul id="partidos">
 
-            </ul>
-        </li>
-        <li> <a href="/login" class="">Login</a></li>
-        <li>  <a href="/Registro" class="">Registrate</a></li>
-            <nav>
-              
-                <!--<a href="/crearparti" class="">crearpartido</a>
-                <a href="/crearforo" class="">crearforo</a>
-                <a href="/crearurna" class="">crearurna</a>
-                <a href="/admin" class="">Administrador</a>-->
-                
-            </nav>
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li ><a  href="/">Inicio</a></li>
+                        <li ><a  href="/urnaespec">Urna</a></li>
+                        <li><a href="/ForosEspec">Foros</a></li>
+                        <li><a href="/NotiEspec">Noticias</a></li>
+                        <li><a href="">Partidos</a>
+                            <ul id="partidos">
+        
+                            </ul>
+                        </li>
+                        <li> <a href="/login">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+            <div class="padre">
+            <div class="padre">
+                <a href="/Registro" class="btn__header-register">Registrate</a>
+            </div>
+        </div>
+        </div>
+
     </header>
     <script>
         let =url='/partidos'
@@ -167,7 +174,7 @@
          const mostrar=(data)=>{
             console.log (data.length)
           
-                alert(data[0].DesInt)
+               
              
 
                    
@@ -195,8 +202,8 @@ document.getElementById("modal").addEventListener("click",(e)=>{
 
 
 <footer class="footer">
-<h4>FOOTER</h4>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, voluptates.
+<h4>POLITICA ACTIVA</h4>
+CRECIENDO POLITICAMENTE CONTIGO!
 </footer>
     </div>
     
