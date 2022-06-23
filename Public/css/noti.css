@@ -700,11 +700,6 @@ ul, ol {
     display: flex;
     align-items: center;
 }
-.logo img{
-    height: 150px;
-    border-radius: 12vh;
-    margin-left: 50px;
-}
 nav a{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
