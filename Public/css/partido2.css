@@ -204,11 +204,22 @@
       font-family: 'Poppins', sans-serif;
       margin-right: auto;
     }
+    .contenedor > .content{
+      height: 320px;
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Lobster', cursive;
+            font-family: 'Merriweather', serif;
+            font-family: 'Poppins', sans-serif;
+   
+      border-radius: 1.5vh;
+    }
     
 
 
     .contenedor > .logo,
-    .contenedor > .content,
+ 
     .contenedor > .sidebar,
     .contenedor > .footer,
     .contenedor > div {
@@ -218,7 +229,7 @@
         font-family: 'Lobster', cursive;
               font-family: 'Merriweather', serif;
               font-family: 'Poppins', sans-serif;
-        
+     
         border-radius: 1.5vh;
     }
     
