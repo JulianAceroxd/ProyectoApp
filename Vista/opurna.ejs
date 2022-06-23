@@ -9,6 +9,7 @@
     <script src="/js/opciones.js"></script>
     <link rel="icon" href="img/logo.jpg">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   
@@ -21,20 +22,58 @@
   
     </script>
     <header>
-        <a href="#" class="logo">
-            <img src="/img/logo.jpg" alt="logo"> 
-            
-        </a>
-       
-            <nav>
-                <a href="/crearurna" class="">Urnas</a>
-                <a href="/crearpartido" class="">Partidos</a>
-                <a href="/crearnoticia" class="">Noticias</a>
-                <a href="/crearforo" class="">Foros</a>
-                <a href="/cerrar" class="">Cerrar Sesion</a>
-              
-                
-            </nav>
+
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="">Urna</a>
+                            <ul>
+                                <li><a href="/crearurna" class="">crear urnas</a></li>
+                         
+                            </ul>
+                        </li>
+                        
+                        <li><a href="/foros" class="">Foros</a>
+                            <ul>
+                                <li><a href="/crearforo" class="">crear foros </a></li>
+                           
+                            </ul>
+                        </li>
+                        <li><a href="/noticias" class="">Noticias</a>
+                            <ul>
+                                <li><a href="/crearnoticia" class="">crear noticias</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Integrante</a>
+                            <ul>
+                                <li><a href="/AgreInt" class="">crear integrante</a></li>
+                            
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Partido</a>
+                            <ul>
+                                <li><a href="/crearpartido" class="">crear partido</a></li>
+                             
+                            </ul>
+                        </li>
+                        <li><a href="/" class="">Cerrar Sesion</a>
+                       
+                    </ul>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+            <div class="padre">
+           
+        </div>
+        </div>
+
     </header>
     <hr>
     <div class="container mt-4">
