@@ -4,10 +4,12 @@ $(document).ready(function(){
   
 
     $('.botons').on('click',function(){
+        
          
 contador=contador+1;
 
-if(contador>2){
+if(contador>1){
+   
 
 }else{
       
@@ -73,16 +75,21 @@ alert("YA PARTICIPASTE! PARTICIPA EN LAS DEMAS URNAS.")
 
  
 
-    var button = ' <form class="for" id="eventos" action="Votos" method="post"><div class="loo"><input   type="submit"value="'+data[i].Opcion+'"  id="evento"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
+    var button = ' <form class="for" id="" action="Votos" method="post"><div class="loo"><input   type="submit"value="'+data[i].Opcion+'"  id="eventovt"  name="opcion"/><input type="hidden"value="'+data[i].IdUrna+'"  id="num_parrafos" name="id"/><input type="hidden" value="'+idu+'" name="usuario"></div></form>'
+    
     $('#botones'+d ).append(button);
+   
+    
         
     
   
    
 }} 
+$('.for').on('click',function(){
+    alert("Voto Registrado Exitosamente.")
+  });
 
-fetchMock.reset();
-fetchMock.restore(); 
+
 
 
 

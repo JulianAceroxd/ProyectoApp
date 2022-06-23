@@ -193,9 +193,7 @@ ul, ol {
     display:block;
     border-radius: 2vh;
 }
-.op{
 
-}
 
 .nav li a:hover {
     background: linear-gradient( 110deg, #00838F 60%,  #ffff 30%);
@@ -301,6 +299,17 @@ font-family: 'Poppins', sans-serif;
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 5);
     background-color: #e2e2e2;
+}
+.boton{
+    font-size: 1.5em;
+    margin: 15px;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 5);
+    background-color: #e2e2e2;
+    margin-left: 290px;
+
 }
 .botn{
 

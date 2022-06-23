@@ -16,10 +16,15 @@
 
             <script src="../js/jquery-3.6.0.min.js"></script>
             <script src="../js/estadisticaurna.js"></script>
+            <script src="/private/js/visual.js?v=1"></script>
           
             
             <title>Usuario</title>
         </head>
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
         <body>
             
             <script>
@@ -66,6 +71,17 @@
             </script>
             <div class="contitu">
         <H1 class="titu"><a>Modulo Urnas</a></H1>
+        <select class="boton" onload="checkCookies()" id="opcion" name="select">
+            <option value=""selected>Selecciona El Tipo De Grafico A Visualizar</option>
+            <option value="bar">Barra</option>
+            <option value="pie" >Torta</option>
+            <option value="line">lineas</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="polarArea">Polar</option>
+            <option value="radar">Radar</option>
+            <option value="scatter">Scatter</option>
+            
+          </select>
         </div>
         <div>
             
@@ -77,7 +93,9 @@
                 <div class="contnomde">
                 <h1 class="bot"><%=Datos.NomUrna%></h1>
                 <p class="bot"><%=Datos.DesUrna%></p>
-                <div class="botn"><input class="botons" onclick="" type="button" value="Ver Urna" id="evento" class="Confirmar"></div>
+               
+                <div class="botn"><input class="botons" type="button" value="Ver Urna" id="evento" class="Confirmar"></div>
+               
                 <div  class="botones3" id="botones<%=Datos.IdUrna%>">
                 </div>
             </div>
@@ -94,10 +112,13 @@
          
              
              <%})%>
+           
+             </script>
             <script>
                 
                  $(document).ready(function(){
                     $('.close-btn').on('click',function(){
+                
      
         $('.alert').addClass("hide");
       $('.alert').removeClass("show");
@@ -112,7 +133,9 @@
 
          
          $('.botons').on('click',function(){
+           
         
+      
         let btn=$('.botons').index(this);
         let doc=$('.id').eq(btn);
         
@@ -122,10 +145,23 @@
         const d2={
             id: d
         };
+
+       
+            var x = document.getElementById("opcion").value;
+
+
+ 
+         if(x===""){
+           alert("Tiene que seleccionar el tipo de grafico!")
+         }else{
+
+        
+         
+      
         
                 let ctx=document.getElementById('myChart'+d)
                  var myChart=new Chart(ctx,{
-                     type:'bar',
+                     type:x,
                      data:{
                          datasets:[{
                              
@@ -166,22 +202,24 @@
                     console.log (data.length)
                      data.forEach(element => {
                          myChart.data['labels'].push(element.Opcion)
-                         myChart.data['datasets'][0].data.push(element.cantidad)
+
+                         myChart.data['datasets'][0].data.push((element.cantidad/data.reduce((a,b)=>a+b.cantidad,0))*100)
+
                          myChart.update();
                     
                      });
                   
               
-                     
+                    } 
                  }
+                 
+                 
                 });
+              
         });
           
             </script>
-            <script>
-                $('#eventos').on('click',function(){
-    alert("le diste clickkk")
-        });
+       
             </script>
          
         </body>
