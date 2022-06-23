@@ -159,9 +159,26 @@ a:link, a:visited, a:active {
 
 .btn__header-register:hover,
 .btn__register-cover:hover{
-    background: #69F1A1;
-    color: #000;
+    
+    color: #e0b5b5;
+    cursor: pointer;
+    
+    
 }
+.btn__header-register,
+.btn__register-cover{
+    
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 20px;
+    width: 20px;
+    
+}
+.padre{
+   background-color:#000; 
+   margin: 20px;
+}
+
 
 #icon_menu{
     display: none;
@@ -198,6 +215,7 @@ main{
 .buttons__cover{
     display: flex;
     margin-top: 40px;
+    background-color: #000;
 }
 
 .btn__readMore-cover{
@@ -244,8 +262,8 @@ main{
 }
 
 #icon_heart{
-    width: 400px;
-    margin-top: -20px;
+    width: 300px;
+    margin-top: 40px;
     position: relative;
     filter: drop-shadow(-40px 0px 30px rgba(0,0,0,0.5));
 }
@@ -306,6 +324,7 @@ main{
 
     .header__register{
         display: none;
+        background-color: #000;
     }
 
     .menu{
@@ -380,5 +399,9 @@ main{
     .banner__text{
         width: 100%;
         margin-top: -100px;
+    }
+    .header__register{
+        display: none;
+        background-color: #000;
     }
 }
