@@ -1,5 +1,5 @@
 $(document).ready(function(){
-alert("simon entran")
+
     $('.boton').on('click',function(){
 alert("Dando Click")
     let btn=$('.boton').index(this);

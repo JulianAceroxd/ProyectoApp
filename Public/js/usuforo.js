@@ -32,7 +32,7 @@ $(document).ready(function(){
                      const mostrar=(data)=>{
                         contador=contador+1;
                         if(contador>1){
-                alert("Ya Diste Click")
+               
                         }else{
                         const comentario=document.getElementById('prueba')
                         const template=document.querySelector('#Template-1').content
