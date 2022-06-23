@@ -1,9 +1,5 @@
 
-body{
-    background-color: aliceblue;
-    font-family: 'Roboto' sans-serif;
-    margin: 0;
-}
+
 h1{
     font-size: 3.5em;
     font-family: 'Lobster', cursive;
@@ -39,16 +35,7 @@ a{
  
 }
 
-header{
-  
-    display: flex;
-    min-height: 160px;
-    background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
-    justify-content: space-between;
-    align-items: center;
-  
-    padding: 10px;
-}
+
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
 * {
     margin:0px;
@@ -121,11 +108,7 @@ ul, ol {
     display: flex;
     align-items: center;
 }
-.logo img{
-    height: 150px;
-    border-radius: 12vh;
-    margin-left: 50px;
-}
+
 nav a{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
@@ -299,9 +282,9 @@ footer .container{
     margin-right: auto;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #00838F;
     border: 1px solid black;
-
+color: #FFFFFF;
     margin-top: 10vh;
     border-radius: 3vh;
   
@@ -312,7 +295,7 @@ footer .container{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-
+ color: #FFF;
     
     
 }
