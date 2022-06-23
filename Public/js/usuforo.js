@@ -1,4 +1,3 @@
-
 let contador=0;
 $(document).ready(function(){
     $('.comentario-principal-usuario').on('click',function(){
@@ -32,7 +31,7 @@ $(document).ready(function(){
                      const mostrar=(data)=>{
                         contador=contador+1;
                         if(contador>1){
-               
+                alert("Ya Diste Click")
                         }else{
                         const comentario=document.getElementById('prueba')
                         const template=document.querySelector('#Template-1').content
@@ -121,6 +120,7 @@ body: JSON.stringify(d3),
       const mostrar2=(data2)=>{
         if(data2.length===0){
             let idlocal=localStorage.getItem("IdSub");
+            alert(idlocal)
            
             alert(" Aun No Hay Sub Comentarios");
             const EnvComentario=document.getElementById('com'+idlocal)
@@ -185,8 +185,3 @@ console.log(EnvComentario);
     
 
     });
-    
-        
-    
-    
-    
