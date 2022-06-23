@@ -8,7 +8,6 @@ html {
 
 * {
     margin: 0;
-    background: #F5F5F5;
     padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -58,8 +57,7 @@ Copiar esto
     text-decoration: none;
 }
 .publicacion-realizada{
-    border-radius: 14px;
-    border: 5px solid#00838F;
+    border-radius: 12px;
     
 }
 .des {
@@ -87,7 +85,6 @@ Copiar esto
     margin-left: 2%;
 }
 .comentarios-usuarios .nombre-usuario {
-   
    
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
@@ -118,7 +115,7 @@ Copiar esto
     font-family: 'Poppins', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 14px;
     
     font-size: 5vh;
 }
@@ -593,7 +590,7 @@ font-family: 'Lobster', cursive;
 
 
 body{
-    background: #F5F5F5;
+    background-color: aliceblue;
     font-family: 'Roboto' sans-serif;
     margin: 0;
 }
