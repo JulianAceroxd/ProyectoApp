@@ -244,6 +244,18 @@ main{
     width: 100%;
     margin-top: 18px;
 }
+.media__coverr{
+  
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.media__coverr video{
+    width: 100%;
+    margin-top: 18px;
+}
 
 /*BANNER*/
 
@@ -382,6 +394,9 @@ main{
     }
 
     .media__cover{
+        display: none;
+    }
+    .media__coverr{
         display: none;
     }
 
