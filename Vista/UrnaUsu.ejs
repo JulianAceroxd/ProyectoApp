@@ -8,6 +8,7 @@
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <link rel="icon" href="img/logo.jpg">
             <link rel="stylesheet" href="/css/urnas.css">
+            <link rel="stylesheet" href="/css/index.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -32,22 +33,36 @@
           
             </script>
            <header>
-            <a href="#" class="logo">
-                <img src="/img/logo.jpg" alt="logo">
-            </a>
-            <div id="header">
-                <ul class="nav">
-                    <li><a href="/Usuario" class="">Inicio</a></li>
-                    <li><a href="/urnaUsu" class="">Ver urnas</a></li>
-                    <li><a href="/ForosUsu" class="">Foros de discusion</a></li>
-                    <li><a href="/NotiUsu" class="">Noticias</a></li>
-                    <li><a href="">Partidos</a>
-                        <ul id="partidos">
+
+            <div class="container__header">	
     
+                <div class="logo">
+                    <img src="/img/logo.png" alt="">
+                </div>
+    
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="/Usuario" class="">Inicio</a></li>
+        <li><a href="/urnaUsu" class="">Ver urnas</a></li>
+        <li><a href="/ForosUsu" class="">Foros de discusion</a></li>
+        <li><a href="/NotiUsu" class="">Noticias</a></li>
+        <li><a href="">Partidos</a>
+            <ul id="partidos">
+
+            </ul>
+        </li>
+        <li><a href="/cerrar" class="">Cerrar Sesion</a></li>
                         </ul>
-                    </li>
-                    <li><a href="/cerrar" class="">Cerrar Sesion</a></li>
+                    </nav>
+                </div>
+                <i class="fa-solid fa-bars" id="icon_menu"></i>
+               
+            </div>
+    
         </header>
+       
+       
             <script>
                 let =url='/partidos'
                 fetch(url)
@@ -72,7 +87,7 @@
             </script>
             <div class="contitu">
         <H1 class="titu"><a>Modulo Urnas</a></H1>
-        <select class="boton" onload="checkCookies()" id="opcion" name="select">
+        <div class="opgra"><select class="boton" onload="checkCookies()" id="opcion" name="select">
             <option value=""selected>Selecciona El Tipo De Grafico A Visualizar</option>
             <option value="bar">Barra</option>
             <option value="pie" >Torta</option>

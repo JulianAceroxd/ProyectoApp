@@ -84,20 +84,7 @@ a{
  
 }
 
-header{
-  
-    display: flex;
-    min-height: 160px;
-    background: linear-gradient(110deg, #C7DDEC 40%,  #BCE6F9 60%);
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Lobster', cursive;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-  
-    padding: 10px;
-}
+
 /*diseño juliaasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaann */
 * {
     margin:0px;
@@ -193,11 +180,7 @@ ul, ol {
     display: flex;
     align-items: center;
 }
-.logo img{
-    height: 150px;
-    border-radius: 12vh;
-    margin-left: 50px;
-}
+
 nav a{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;

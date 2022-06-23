@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/noti.css">
+    <link rel="stylesheet" href="/css/index.css">
    
     
 
@@ -16,23 +17,37 @@
 
 <body>
     <header>
-        <a href="#" class="logo">
-            <img src="./img/logo.jpg" alt="logo">
-          
-        </a>
-        <div id="header">
-            <ul class="nav">
-                <li><a href="/Usuario" class="">Inicio</a></li>
-                <li><a href="/urnaUsu" class="">Ver urnas</a></li>
-                <li><a href="/ForosUsu" class="">Foros</a></li>
-                <li><a href="/NotiUsu" class="">Noticias</a></li>
-                <li><a href="">Partidos</a>
-                    <ul id="partidos">
 
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="/Usuario" class="">Inicio</a></li>
+                        <li><a href="/urnaUsu" class="">Ver urnas</a></li>
+                        <li><a href="/ForosUsu" class="">Foros</a></li>
+                        <li><a href="/NotiUsu" class="">Noticias</a></li>
+                        <li><a href="">Partidos</a>
+                            <ul id="partidos">
+                    
+                            </ul>
+                        </li>
+                        <li><a href="/cerrar" class="">Cerrar Sesion</a></li>
                     </ul>
-                </li>
-                <li><a href="/cerrar" class="">Cerrar Sesion</a></li>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+           
+        </div>
+
     </header>
+
+
+   
     <script>
         let =url='/partidos'
         fetch(url)
