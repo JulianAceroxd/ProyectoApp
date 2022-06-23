@@ -6,7 +6,7 @@
     text-align: center;
    
     padding: 12px;
-    background-image: url("../img/fondoperfil.webp");
+    background: #F5F5F5;
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
@@ -101,16 +101,6 @@ a{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
-}
-header{
-  
-    display: flex;
- 
-    background-color: coral;
-    justify-content: space-between;
-    align-items: center;
-  
-    padding: 10px;
 }
 h2{
     text-align: center;
