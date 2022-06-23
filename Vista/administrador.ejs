@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="icon" href="img/logo.jpg">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
 
     <title>Administrador</title>
 </head>
@@ -14,47 +15,63 @@
     <script>
      swal("BIENVENID@!", "<%= Nombre%> <%= Apellido%>!", "success");
     </script>
-    <header>
-        <a href="#" class="logo">
-            <img src="/img/logo.jpg" alt="logo">
-        </a>
-        <div id="header">
-            <ul class="nav">
-                <li><a href="#" class="">Urna</a>
+     
+     <header>
+
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
                     <ul>
-                        <li><a href="/crearurna" class="">crear urnas</a></li>
-                        <li><a href="/urna" class="">ver urnas</a></li>
+                        <li><a href="#" class="">Urna</a>
+                            <ul>
+                                <li><a href="/crearurna" class="">crear urnas</a></li>
+                         
+                            </ul>
+                        </li>
+                        
+                        <li><a href="/foros" class="">Foros</a>
+                            <ul>
+                                <li><a href="/crearforo" class="">crear foros </a></li>
+                           
+                            </ul>
+                        </li>
+                        <li><a href="/noticias" class="">Noticias</a>
+                            <ul>
+                                <li><a href="/crearnoticia" class="">crear noticias</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Integrante</a>
+                            <ul>
+                                <li><a href="/AgreInt" class="">crear integrante</a></li>
+                            
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Partido</a>
+                            <ul>
+                                <li><a href="/crearpartido" class="">crear partido</a></li>
+                             
+                            </ul>
+                        </li>
+                        <li><a href="/" class="">Cerrar Sesion</a>
+                       
                     </ul>
-                </li>
-                
-                <li><a href="/foros" class="">Foros</a>
-                    <ul>
-                        <li><a href="/crearforo" class="">crear foros </a></li>
-                        <li><a href="#" class="">ver foros</a></li>
-                    </ul>
-                </li>
-                <li><a href="/noticias" class="">Noticias</a>
-                    <ul>
-                        <li><a href="/crearnoticia" class="">crear noticias</a></li>
-                        <li><a href="/noticias" class="">ver noticias</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="">Integrante</a>
-                    <ul>
-                        <li><a href="/AgreInt" class="">crear integrante</a></li>
-                        <li><a href="#" class="">ver integrante</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="">Partido</a>
-                    <ul>
-                        <li><a href="/crearpartido" class="">crear partido</a></li>
-                        <li><a href="#" class="">ver partido</a></li>
-                    </ul>
-                </li>
-                <li><a href="/" class="">Cerrar Sesion</a>
-             </ul>
+                </nav>
+            </div>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+            <div class="padre">
+           
+        </div>
+        </div>
+
     </header>
-   
+
+    
     
 </body>
 </html>
