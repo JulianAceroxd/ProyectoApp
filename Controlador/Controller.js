@@ -250,10 +250,7 @@ Controller.cambiarfoto=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIO
     console.log(d+i)
   
     cnn.query('UPDATE tbusuarios SET  Img="'+i+'" WHERE IdUsu="'+d+'"',async(err,resbd)=>{// CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
-    if(err){
-       
-
-     //NOS MUESTRA EL ERROR POR MEDIO DEL IF
+    if(err){//NOS MUESTRA EL ERROR POR MEDIO DEL IF
     }
     else{
         console.log(resbd);
@@ -271,6 +268,28 @@ Controller.cambiarfoto=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIO
 
 
     }
+Controller.cambiardatos=async(req,res,next)=>{  // CREACION PARA INSERTAR USUARIOS FUNCION FLECH
+    const n=req.body.NomUsu;
+    const a=req.body.ApeUsu;
+    const u=req.body.Usuario;
+    const c=req.body.ClaUsu;
+    const d=req.body.IdUsu;
+
+    
+            //POR MEDIO DEL CONST ALMACENAMOS EN LETRAS LOS VALORES DE LA PAGINA A INSERTAR,GRACIAS ESTO A LA RUTAS
+        console.log(n+a+u)
+      
+        cnn.query('UPDATE tbusuarios SET  NomUsu="'+n+'", ApeUsu="'+a+'", Usuario="'+u+'",ClaUsu="'+c+'"  WHERE IdUsu="'+d+'"',async(err,resbd)=>{// CNN CNEXION A BD Y SU RESPECTIVO CODIGO DE INSERT CON LOS VALORES DE CONST
+        if(err){//NOS MUESTRA EL ERROR POR MEDIO DEL IF
+        }
+        else{
+            console.log(resbd);
+            res.render('contact');  //SI TODO SALE BIEN, NOS RETORNA A LA MISMA VISTA QUE ESTAMOS
+        }
+        });
+    
+    
+        }
 Controller.urnaUsu=(req,res,next)=>{    //creamos una consulta de usuarios por medio de la funcion flecha
   
     cnn.query('SELECT * FROM tburna',(err,resbd)=>{  //cnn que contiene la conexion a base de datos nos genera la consulta con un err que seria error o un resbd que seria una respuesta 
